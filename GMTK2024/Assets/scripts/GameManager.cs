@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Character currentCharacterJudged;
     public AllUIRefs allUIRefs;
 
-    public int turns;
+    public int feathersOfTruth;
     public int incorrectChoices;
     public BubbleGenerator bubbleGenerator;
     public static GameManager instance;
@@ -33,10 +33,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (turns <= 0 || incorrectChoices < -3)
-        {
-            GameOver();
-        }
+        // if (feathersOfTruth <= 0 || incorrectChoices < -3)
+        // {
+        //     GameOver();
+        // }
     }
 
     void OnDestroy()

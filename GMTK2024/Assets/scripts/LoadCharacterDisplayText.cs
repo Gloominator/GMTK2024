@@ -50,11 +50,6 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
     public void PressQuestion(int index)
     {
-        //!!connect it to turn based system
-        GameManager.instance.turns -= 1;
-        UIManager.instance.UpdateTurnsText();
-
-
         //shows the answer to your question
         chat[0].text = currentCharacter.facts[index].frontFact;
 

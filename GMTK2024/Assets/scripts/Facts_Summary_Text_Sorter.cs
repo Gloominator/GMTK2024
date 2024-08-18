@@ -13,7 +13,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
     public List<Fact> currentFactsAlreadyGivenToThePlayer;
     public LoadCharacterDisplayText loadCharacterDisplayText;
     public SpawnTestWeights scalesSpawnerFactsSummary;
-    public Dictionary<Fact, TextMeshProUGUI> currentFactAndTmpPairs = new (); // keeps track of which fact is in which slot
+    public Dictionary<Fact, TextMeshProUGUI> currentFactAndTmpPairs = new(); // keeps track of which fact is in which slot
     public Dictionary<Fact, GameObject> factWeightObjectPairs = new(); // keeps track what weights - facts are on the scales
 
     void Start()
@@ -24,33 +24,31 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
     public void SortFrontFact(Fact fact, bool isFrontFact)
     {
         if (isFrontFact)
-        { 
-        if (fact.frontWeight >= 0)
         {
-          int slotNum =  WhichTextSlotIsVacant(isGoodSlot: true );
-            currentFactsInGoodSlots.Add(fact);
-            goodFactsTMP[slotNum].text = fact.frontFactForSummaryScales;
-            goodFactsTMP[slotNum].gameObject.SetActive(true);
-            
-            currentFactAndTmpPairs.Add(fact, goodFactsTMP[slotNum]);
-           
-           factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjRight(Mathf.Abs(fact.frontWeight)));
-        }
-        else
-        {
-            int slotNum = WhichTextSlotIsVacant(isGoodSlot: false);
-            currentFactsInBadSlots.Add(fact);
-            badFactsTMP[slotNum].text = fact.frontFactForSummaryScales;
-            badFactsTMP[slotNum].gameObject.SetActive(true);
+            if (fact.frontWeight >= 0)
+            {
+                int slotNum = WhichTextSlotIsVacant(isGoodSlot: true);
+                currentFactsInGoodSlots.Add(fact);
+                goodFactsTMP[slotNum].text = fact.frontFactForSummaryScales;
+                goodFactsTMP[slotNum].gameObject.SetActive(true);
 
-            currentFactAndTmpPairs.Add(fact, badFactsTMP[slotNum]);
+                currentFactAndTmpPairs.Add(fact, goodFactsTMP[slotNum]);
 
-            factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(fact.frontWeight)));
-        }
+                factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjRight(Mathf.Abs(fact.frontWeight)));
+            }
+            else
+            {
+                int slotNum = WhichTextSlotIsVacant(isGoodSlot: false);
+                currentFactsInBadSlots.Add(fact);
+                badFactsTMP[slotNum].text = fact.frontFactForSummaryScales;
+                badFactsTMP[slotNum].gameObject.SetActive(true);
+
+                currentFactAndTmpPairs.Add(fact, badFactsTMP[slotNum]);
+
+                factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(fact.frontWeight)));
+            }
         }
         else if (!isFrontFact)
-
-
         {
             if (fact.actualWeight >= 0)
             {
@@ -77,15 +75,15 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
             currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
         }
         currentFactsAlreadyGivenToThePlayer.Add(fact);
-        
+
     }
 
- 
+
 
     public bool HasLiedToThePlayer()
     {
-       
-        foreach(Fact factGiven in currentFactsAlreadyGivenToThePlayer)
+
+        foreach (Fact factGiven in currentFactsAlreadyGivenToThePlayer)
         {
             if (factGiven.isLie)
                 return true;
@@ -111,7 +109,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
             Destroy(obj, 2);
         }
         factWeightObjectPairs.Clear();
-       
+
 
         for (int i = 0; i < character.facts.Count; i++)
         {
@@ -139,7 +137,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
 
         }
 
-        
+
 
     }
 
@@ -156,7 +154,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
 
     }
 
-  
+
 
     public TextMeshProUGUI FindTMPForFalseFact()
     {
@@ -168,7 +166,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
     public void StrikeThroughFactInTheList(Fact fact)
     {
         TextMeshProUGUI tmp = currentFactAndTmpPairs[fact];
-       
+
         tmp.color = Color.black;
         tmp.fontStyle = FontStyles.Strikethrough;
 

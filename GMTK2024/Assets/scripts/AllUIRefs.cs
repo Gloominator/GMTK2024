@@ -77,12 +77,16 @@ public class AllUIRefs : MonoBehaviour
 
         // 2. Populate next character to be judged
         // 4. Update all text to reflect info in new character?
+        ResetUIToDefaultState();
+        bubbleGenerator.ClearBubbles();
+
         GameManager.instance.currentCharacterJudged =
             GameManager.instance.characters[Random.Range(0, GameManager.instance.characters.Count)];
+
         GameManager.instance.loadCharacterDisplayText.LoadCharacterText(GameManager.instance.currentCharacterJudged);
+
         bubbleGenerator.GenerateBubblesOnStart();
         // 3. Reset state of all UI Elements
-        ResetUIToDefaultState();
         
 
 
