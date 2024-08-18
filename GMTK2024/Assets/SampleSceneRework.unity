@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FactsSummaryScalesObject: {fileID: 1675468127}
-  LiesCheckScalesObject: {fileID: 1765387609}
+  LiesCheckScalesObject: {fileID: 1648050827}
   PlayerChatBoxCanvas: {fileID: 140313767}
   UIJudgeObj: {fileID: 428608809}
   nextLevelCanvas: {fileID: 0}

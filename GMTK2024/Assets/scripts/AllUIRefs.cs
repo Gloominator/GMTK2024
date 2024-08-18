@@ -32,7 +32,10 @@ public class AllUIRefs : MonoBehaviour
     public void HideUIJudge()
     {
         UIManager.instance.lieDetectorObject.SetActive(false);
-        FactsSummaryScalesObject.SetActive(false);
+        LiesCheckScalesObject.GetComponentInChildren<SpawnTestWeights>().currentFeather.SetActive(false);
+        // gets current feather
+
+        //FactsSummaryScalesObject.SetActive(false);
         PlayerChatBoxCanvas.SetActive(false);
         judgeButtonPanel.SetActive(false);
         bubblesContainer.SetActive(false);

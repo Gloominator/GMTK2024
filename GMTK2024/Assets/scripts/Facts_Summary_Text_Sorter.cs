@@ -102,14 +102,19 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
     public void ShowTrueFacts()
     {
         Character character = loadCharacterDisplayText.currentCharacter;
+        DisableGoodAndBadTMPs();
+        factWeightObjectPairs.Clear();
+       
 
-      
         for (int i = 0; i < character.facts.Count; i++)
         {
             if (character.facts[i].actualWeight >= 0)
             {
                 goodFactsTMP[WhichTextSlotIsVacant(true)].text = character.facts[i].actualFactForSummaryScales;
                 goodFactsTMP[WhichTextSlotIsVacant(true)].gameObject.SetActive(true);
+
+                //spawn a weight too to show the true balance
+                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjRight(Mathf.Abs(character.facts[i].frontWeight)));
             }
 
         }
@@ -120,8 +125,24 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
             {
                 badFactsTMP[WhichTextSlotIsVacant(false)].text = character.facts[i].actualFactForSummaryScales;
                 badFactsTMP[WhichTextSlotIsVacant(false)].gameObject.SetActive(true);
+
+                //spawn a weight too to show the true balance
+                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(character.facts[i].frontWeight)));
             }
 
+        }
+
+    }
+
+    void DisableGoodAndBadTMPs()
+    {
+        foreach (TextMeshProUGUI tmp in goodFactsTMP)
+        {
+            tmp.gameObject.SetActive(false);
+        }
+        foreach (TextMeshProUGUI tmp in badFactsTMP)
+        {
+            tmp.gameObject.SetActive(false);
         }
 
     }
