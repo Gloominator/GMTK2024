@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478d30c84459c144a884417133d45cab, type: 3}
+  m_Name: What_did_you_do_in_life_LIE
+  m_EditorClassIdentifier: 
+  question: What did you do for your profession?
+  frontFact: I sell medicinal goods to those in need
+  isLie: 1
+  frontFactForSummaryScales: Sold medicine
+  actualFactForSummaryScales: Sold drugs
+  frontWeight: 2
+  actualWeight: -4
