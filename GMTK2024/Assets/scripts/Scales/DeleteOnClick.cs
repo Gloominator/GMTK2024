@@ -21,6 +21,6 @@ public class DeleteOnClick : MonoBehaviour
         GetComponent<Rigidbody2D>().mass = weight;
         mySpawnPlace = spawnPlace;
 
-        gameObject.name = "Left weight " + weight + " kg";
+        gameObject.name = spawnPlace.ToString()  + weight + " kg";
     }
 }

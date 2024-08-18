@@ -22,19 +22,20 @@ public class BubbleGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GenerateBubblesOnStart();
+    }
+
+    
+
+    public void GenerateBubblesOnStart()
+    {
         bubblesToGenerate = GameManager.instance.currentCharacterJudged.facts.Count;
         GenerateBubble();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
-
-void GenerateBubble()
+    void GenerateBubble()
 {
     for (int i = 1; i < bubblesToGenerate; i++)
     {

@@ -103,6 +103,13 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
     {
         Character character = loadCharacterDisplayText.currentCharacter;
         DisableGoodAndBadTMPs();
+        DisableButtonInteractabilityTMPs();
+
+        foreach (GameObject obj in factWeightObjectPairs.Values)
+        {
+            obj.SetActive(false);
+            Destroy(obj, 2);
+        }
         factWeightObjectPairs.Clear();
        
 
@@ -114,7 +121,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
                 goodFactsTMP[WhichTextSlotIsVacant(true)].gameObject.SetActive(true);
 
                 //spawn a weight too to show the true balance
-                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjRight(Mathf.Abs(character.facts[i].frontWeight)));
+                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjRight(Mathf.Abs(character.facts[i].actualWeight)));
             }
 
         }
@@ -127,10 +134,12 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
                 badFactsTMP[WhichTextSlotIsVacant(false)].gameObject.SetActive(true);
 
                 //spawn a weight too to show the true balance
-                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(character.facts[i].frontWeight)));
+                factWeightObjectPairs.Add(character.facts[i], scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(character.facts[i].actualWeight)));
             }
 
         }
+
+        
 
     }
 
@@ -146,6 +155,8 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
         }
 
     }
+
+  
 
     public TextMeshProUGUI FindTMPForFalseFact()
     {
@@ -192,6 +203,43 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
             }
         }
         return slot;
+
+    }
+
+
+    void DisableButtonInteractabilityTMPs()
+    {
+        for (int i = 0; i < goodFactsTMP.Count; i++)
+        {
+            goodFactsTMP[i].GetComponent<Button>().interactable = false;
+            badFactsTMP[i].GetComponent<Button>().interactable = false;
+        }
+    }
+
+    public void ResetFactsSummaryScaleThing()
+    {
+        DisableGoodAndBadTMPs();
+
+        //get objects from the scales and disable them
+        foreach (GameObject obj in factWeightObjectPairs.Values)
+        {
+            obj.SetActive(false);
+            Destroy(obj, 2);
+        }
+
+
+        for (int i = 0; i < goodFactsTMP.Count; i++)
+        {
+            goodFactsTMP[i].GetComponent<Button>().interactable = true;
+            badFactsTMP[i].GetComponent<Button>().interactable = true;
+        }
+
+        factWeightObjectPairs.Clear();
+
+        currentFactAndTmpPairs.Clear();
+        currentFactsInGoodSlots.Clear();
+        currentFactsInBadSlots.Clear();
+        currentFactsAlreadyGivenToThePlayer.Clear();
 
     }
 }

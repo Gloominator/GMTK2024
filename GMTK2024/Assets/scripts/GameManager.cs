@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
 
     public int turns;
     public int incorrectChoices;
-  
-
+    public BubbleGenerator bubbleGenerator;
     public static GameManager instance;
     private void Awake()
     {
@@ -72,6 +71,7 @@ public class GameManager : MonoBehaviour
         if ((isHeaven && currentCharacterJudged.shouldGoToHeaven) || !isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
             // NO POINTS ARE LOST
+            UIManager.instance.UpdateVerdictsText();
         }
         else
         {
