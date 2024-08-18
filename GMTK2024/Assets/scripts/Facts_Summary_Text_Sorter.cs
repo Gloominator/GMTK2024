@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Facts_Summary_Text_Sorter : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
 
                 factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(fact.actualWeight)));
             }
+            currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
         }
         currentFactsAlreadyGivenToThePlayer.Add(fact);
         

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46810988d8d2bd4185573df1bdc9646, type: 3}
+  m_Name: Daughter
+  m_EditorClassIdentifier: 
+  facts:
+  - {fileID: 11400000, guid: 8acdf48f45aa9ec4fa42f2308343f8f5, type: 2}
+  - {fileID: 11400000, guid: 2cad08cc7e547df40bbfc7c1db0e5eb1, type: 2}
+  - {fileID: 11400000, guid: 430c6a911d3f3ad46a069749528ee664, type: 2}
+  - {fileID: 11400000, guid: a89855cbf4948e04689489f73d74aaad, type: 2}
+  - {fileID: 11400000, guid: 7eac7bdf3e46c584d83f8f7f2b431af0, type: 2}
+  summedFrontKarma: 1
+  summedActualKarma: -13
+  characterName: Guy
+  characterSprite: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
+  karma: 0
+  shouldGoToHeaven: 0

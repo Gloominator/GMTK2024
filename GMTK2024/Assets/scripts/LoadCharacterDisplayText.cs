@@ -10,7 +10,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     public List<TextMeshProUGUI> chat;
     public Character currentCharacter;
     [SerializeField] Facts_Summary_Text_Sorter factSorter;
-    [SerializeField] SpriteRenderer characterSR;
+    [SerializeField] Image characterSR;
 
     public int questionsRemaining;
     // Start is called before the first frame update

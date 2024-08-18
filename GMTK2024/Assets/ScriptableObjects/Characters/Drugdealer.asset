@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46810988d8d2bd4185573df1bdc9646, type: 3}
+  m_Name: Drugdealer
+  m_EditorClassIdentifier: 
+  facts:
+  - {fileID: 11400000, guid: c774c35c5bef6014caea71c0e473fc25, type: 2}
+  - {fileID: 11400000, guid: cbff6158e1329d8479e721fa60d1a300, type: 2}
+  - {fileID: 11400000, guid: 80ee7b5f954e6f44daa501fa183c193e, type: 2}
+  - {fileID: 11400000, guid: b28f2e42dd0d63c4e9e12bc16d4e2b86, type: 2}
+  - {fileID: 11400000, guid: 83283606efd316c4db4e59a0c36f288e, type: 2}
+  summedFrontKarma: 1
+  summedActualKarma: -13
+  characterName: Guy
+  characterSprite: {fileID: 21300000, guid: cbb5a4c872e411f4f9ba36e8b1cde3ef, type: 3}
+  karma: 0
+  shouldGoToHeaven: 0

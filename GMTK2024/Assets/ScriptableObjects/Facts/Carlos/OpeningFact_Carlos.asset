@@ -17,8 +17,8 @@ MonoBehaviour:
     should go to hell for anything, maybe that one time I killed a bug but you know,
     that thing was big and I was really scared and my girlfriend would\u2019ve cried
     if she had to"
-  isLie: 0
+  isLie: 1
   frontFactForSummaryScales: He lived a decent life
   actualFactForSummaryScales: He's not the most decent guy ever
   frontWeight: 0
-  actualWeight: 0
+  actualWeight: -1

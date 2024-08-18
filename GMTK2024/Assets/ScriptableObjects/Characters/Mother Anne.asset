@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a46810988d8d2bd4185573df1bdc9646, type: 3}
-  m_Name: Guy 1
+  m_Name: Mother Anne
   m_EditorClassIdentifier: 
   facts:
-  - {fileID: 11400000, guid: a6b48e4e4f0433f45b88717d720e9d23, type: 2}
-  - {fileID: 11400000, guid: e3a60966138319642b8e4df66b6f1235, type: 2}
-  - {fileID: 11400000, guid: a05def20d4f01e142a0144859b4e97ea, type: 2}
-  - {fileID: 11400000, guid: 0e5f4de93452a6b46ae44e8ee35fecf6, type: 2}
-  - {fileID: 11400000, guid: b0aa37e0bfa0df848848e72ace54cbba, type: 2}
+  - {fileID: 11400000, guid: 003dd038a3b4fdc44ba4f1e91c8b2e9c, type: 2}
+  - {fileID: 11400000, guid: 737cb0654d3eb234294ab9ddfa22b123, type: 2}
+  - {fileID: 11400000, guid: d039f76a96af28a4995218100571a727, type: 2}
+  - {fileID: 11400000, guid: 0ee13fb7fc6b1554dbdc4b06570fffde, type: 2}
+  - {fileID: 11400000, guid: abba18b2c1141c7459171b6d32fd5594, type: 2}
   summedFrontKarma: 1
   summedActualKarma: -13
   characterName: Guy
   characterSprite: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
   karma: 0
+  shouldGoToHeaven: 0
