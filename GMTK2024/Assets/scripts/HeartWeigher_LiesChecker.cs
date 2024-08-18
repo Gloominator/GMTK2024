@@ -51,12 +51,13 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
      void CheckThisFact(Fact fact)
     {
         if (previousHeartDespawned)
-        { 
-         if (fact.isLie)
+        {
+            facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
+            if (fact.isLie)
          {
             //find this fact in the original list, make it different color, strike it through
             //remove its weight from the scales
-            facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
+           
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].color = Color.black;
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontStyle = FontStyles.Strikethrough;
             facts_Summary_Text_Sorter.factWeightObjectPairs[fact].SetActive(false);

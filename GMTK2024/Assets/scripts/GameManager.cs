@@ -67,9 +67,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
     }
    
-    public void HeavenOrHellChoose(bool heaven)
+    public void HeavenOrHellChoose(bool isHeaven)
     {
-        if ((heaven && currentCharacterJudged.shouldGoToHeaven) || !heaven && !currentCharacterJudged.shouldGoToHeaven)
+        if ((isHeaven && currentCharacterJudged.shouldGoToHeaven) || !isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
             // NO POINTS ARE LOST
         }

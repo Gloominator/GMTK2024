@@ -51,9 +51,9 @@ public class AllUIRefs : MonoBehaviour
         gameManager.Judge();
     }
 
-    public void HeavenOrHellChoose(bool heaven)
+    public void HeavenOrHellChoose(bool isHeaven)
     {
-        gameManager.HeavenOrHellChoose(heaven);
+        gameManager.HeavenOrHellChoose(isHeaven);
     }
 
     // REPLACED NEXT LEVEL FUNCTION
