@@ -18,9 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80ee7b5f954e6f44daa501fa183c193e, type: 2}
   - {fileID: 11400000, guid: b28f2e42dd0d63c4e9e12bc16d4e2b86, type: 2}
   - {fileID: 11400000, guid: 83283606efd316c4db4e59a0c36f288e, type: 2}
-  summedFrontKarma: 1
-  summedActualKarma: -13
-  characterName: Guy
+  summedFrontKarma: -1
+  summedActualKarma: 3
+  characterName: Kyle
   characterSprite: {fileID: 21300000, guid: cbb5a4c872e411f4f9ba36e8b1cde3ef, type: 3}
   karma: 0
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1

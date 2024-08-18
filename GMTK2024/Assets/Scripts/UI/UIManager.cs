@@ -30,9 +30,13 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
+        }             
     }
 
+    private void Start()
+    {
+        UpdateTurnsText();
+    }
     private void Update()
     {
         DisplayLieChecker();

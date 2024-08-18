@@ -19,8 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4a28403f4b261094b94c5c2f3cd5e0ca, type: 2}
   - {fileID: 11400000, guid: 7d58efebe9bed5440aa8a064472ff305, type: 2}
   summedFrontKarma: 1
-  summedActualKarma: -13
-  characterName: Guy
+  summedActualKarma: 9
+  characterName: Father Pickle
   characterSprite: {fileID: 21300000, guid: 21b52f54c19b10a4185af50657d8bae1, type: 3}
   karma: 0
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1

@@ -23,6 +23,9 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     //checks if the player has been lied to
     public void CheckLies()
     {
+        //GameManager.instance.turns -= 1; // shouldn't take any turns maybe
+        //UIManager.instance.UpdateTurnsText();
+
         if (facts_Summary_Text_Sorter.HasLiedToThePlayer())
         {
             Debug.Log("The player has been lied to");
@@ -50,6 +53,9 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     }
      void CheckThisFact(Fact fact)
     {
+        GameManager.instance.turns -= 2;
+        UIManager.instance.UpdateTurnsText();
+
         if (previousHeartDespawned)
         {
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;

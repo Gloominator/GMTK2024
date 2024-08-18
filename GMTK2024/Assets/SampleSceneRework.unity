@@ -3679,7 +3679,7 @@ MonoBehaviour:
   turnsRemainingText: {fileID: 474339186}
   badVerdictsText: {fileID: 783902063}
   loadCharacterDisplayText: {fileID: 910786092}
-  lieDetectorObject: {fileID: 1765387609}
+  lieDetectorObject: {fileID: 1648050827}
   inVerdictState: 0
   questionsRemaining: 0
 --- !u!114 &910786094
@@ -3737,7 +3737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2255ea11d7088c341b48718b3c8976f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FactsSummaryScalesObject: {fileID: 0}
+  FactsSummaryScalesObject: {fileID: 1675468127}
   LiesCheckScalesObject: {fileID: 1765387609}
   PlayerChatBoxCanvas: {fileID: 140313767}
   UIJudgeObj: {fileID: 428608809}
@@ -4019,7 +4019,7 @@ MonoBehaviour:
   scales_Balance_Calc: {fileID: 972494950}
   howLongWaitForNewHeartSpawn: 4
   howLongBeforeFeatherDespawns: 4
-  currentFeather: {fileID: 0}
+  currentFeather: {fileID: 552423651}
 --- !u!233 &972494952
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -4529,7 +4529,7 @@ MonoBehaviour:
   loadCharacterDisplayText: {fileID: 910786092}
   currentCharacterJudged: {fileID: 0}
   allUIRefs: {fileID: 910786096}
-  turns: 50
+  turns: 12
   incorrectChoices: 0
 --- !u!4 &1038831175
 Transform:
