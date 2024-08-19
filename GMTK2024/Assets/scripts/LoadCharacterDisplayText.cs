@@ -29,11 +29,11 @@ public class LoadCharacterDisplayText : MonoBehaviour
         // first pos in the list is the front fact, there's no question
         if (UIManager.instance.characterTextLongform.text.Length <= 0)
         {
-            UIManager.instance.characterTextLongform.text += currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(0) + currentCharacter.facts[0].frontFact + "</color>";
+            UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
         }
         else
         {
-            UIManager.instance.characterTextLongform.text += "\n" + currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(0) + currentCharacter.facts[0].frontFact + "</color>";
+            UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
         }
 
         UIManager.instance.characterNameLongform.text = currentCharacter.characterName;
@@ -60,7 +60,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     public void PressQuestion(int index)
     {
         //shows the answer to your question
-        chat[0].text += "\n" + currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(index) + currentCharacter.facts[index].frontFact + "</color>";
+        chat[0].text = currentCharacter.facts[index].frontFact;
 
 
         //greens or reds it depending on the weight
