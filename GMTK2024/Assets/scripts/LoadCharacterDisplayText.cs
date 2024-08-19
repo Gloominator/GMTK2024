@@ -9,14 +9,20 @@ public class LoadCharacterDisplayText : MonoBehaviour
 {
     public List<TextMeshProUGUI> chat;
     public Character currentCharacter;
-    [SerializeField] Facts_Summary_Text_Sorter factSorter;
+     HeartWeigher_LiesChecker heartWeigherLiesChecker;
+    Facts_Summary_Text_Sorter factSorter;
     [SerializeField] Image characterSR;
 
     public int questionsRemaining;
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        heartWeigherLiesChecker = GetComponent<HeartWeigher_LiesChecker>();
+        factSorter = GetComponent<Facts_Summary_Text_Sorter>();
+    }
     void Start()
     {
         UpdateCurrentCharacter();
+      
     }
 
     void UpdateCurrentCharacter()
@@ -30,6 +36,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
         if (UIManager.instance.characterTextLongform.text.Length <= 0)
         {
             UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
+           
         }
         else
         {
@@ -38,7 +45,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
         UIManager.instance.characterNameLongform.text = currentCharacter.characterName;
         // SetAnswerTextRedOrGreen(0);
-
+        
 
         for (int i = 1; i < chat.Count; i++)
         {
@@ -46,6 +53,8 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
             chat[i].text = currentCharacter.facts[i].question;
         }
+
+        heartWeigherLiesChecker.currentFactInTheBigBox = currentCharacter.facts[0]; //obj ref for call lie button
     }
 
     public void LoadCharacterText(Character character)
@@ -75,10 +84,16 @@ public class LoadCharacterDisplayText : MonoBehaviour
         //disables the pressed button and greys out the text              
         //chat[index].GetComponent<Button>().interactable = false;
         //chat[index].color = Color.gray;
-        UIManager.instance.questionsRemaining -= 1;
+        //UIManager.instance.questionsRemaining -= 1;
 
 
 
+    }
+
+
+    public void DisplayStringInBigTextBox(string text)
+    {
+        chat[0].text = text;
     }
 
 
