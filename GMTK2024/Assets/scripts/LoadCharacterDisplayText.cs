@@ -55,7 +55,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
             if (chat[i] == null) return;
 
             //chat[i].text = currentCharacter.facts[i].question;
-            CallTypeSentence(currentCharacter.facts[i].question, callFrameDelay);
+            CallTypeSentence(currentCharacter.facts[i].question, chatCallFrameDelay);
         }
 
         heartWeigherLiesChecker.currentFactInTheBigBox = currentCharacter.facts[0]; //obj ref for call lie button
@@ -78,7 +78,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     {
         //shows the answer to your question
         //chat[0].text = currentCharacter.facts[index].frontFact;
-        CallTypeSentence(currentCharacter.facts[index].frontFact, callFrameDelay); 
+        CallTypeSentence(currentCharacter.facts[index].frontFact, chatCallFrameDelay); 
 
         ChangeCurrentCharacterSprite(currentCharacter.characterSprite); // sets it to normal again
 
@@ -97,7 +97,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     public void DisplayStringInBigTextBox(string text)
     {
        // chat[0].text = text;
-        CallTypeSentence(text, callFrameDelay);
+        CallTypeSentence(text, chatCallFrameDelay);
     }
 
     // void SetAnswerTextRedOrGreen(int factIndex)
