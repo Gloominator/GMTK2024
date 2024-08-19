@@ -16,7 +16,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     [SerializeField] Image characterSR;
 
     public int questionsRemaining;
-    public int callFrameDelay = 2;
+    public int chatCallFrameDelay = 5;
 
     private void Awake()
     {
