@@ -5599,7 +5599,6 @@ MonoBehaviour:
   chat:
   - {fileID: 600774684}
   currentCharacter: {fileID: 0}
-  factSorter: {fileID: 910786094}
   characterSR: {fileID: 2101046604}
   questionsRemaining: 0
 --- !u!114 &910786093
@@ -5675,6 +5674,8 @@ MonoBehaviour:
   heartWeigherScalesSpawner: {fileID: 972494951}
   previousHeartDespawned: 1
   howLongWaitForNewHeartSpawn: 4
+  currentFactInTheBigBox: {fileID: 0}
+  loadCharacterDisplayText: {fileID: 0}
 --- !u!114 &910786096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6707,7 +6708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - {fileID: 11400000, guid: 758e8aa157963b74194708dabf6c67ed, type: 2}
   - {fileID: 11400000, guid: 0b7857619fe70ab4d8b5608e4dded5b6, type: 2}
   - {fileID: 11400000, guid: 4460545cfa010dd44bb6146c99fc122f, type: 2}
   - {fileID: 11400000, guid: 7366047407ee30148abae9bd201c3cf0, type: 2}
