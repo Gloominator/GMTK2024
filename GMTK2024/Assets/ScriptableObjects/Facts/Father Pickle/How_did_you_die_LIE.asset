@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: How_did_you_die_LIE
   m_EditorClassIdentifier: 
   question: How did you die?
-  frontFact: I died of old age
+  frontFact: 'I passed away because of old age , a peaceful death that was surrounded
+    by my loved ones and friends, nothing more that a man of faith like myself could
+    pray for. '
   isLie: 1
   frontFactForSummaryScales: I died of old age
   actualFactForSummaryScales: Died of "Freaky" accident
+  reactionBeingCaught: "Okay okay I had participated in some \u201Cparties\u201D
+    to say the least and it was a little too much for my poor heart."
+  reactionCalledLieWrong: 
   frontWeight: 0
   actualWeight: -2

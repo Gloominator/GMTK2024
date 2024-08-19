@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Did_you_help_others
   m_EditorClassIdentifier: 
   question: Did you help those less fortunate?
-  frontFact: I guided those that were lost from their path
+  frontFact: I guided those that were lost in their lives, every single person that
+    would come in would be treated equally and with no shame for the walk of life
+    that they walked before.
   isLie: 0
   frontFactForSummaryScales: Helped others in life
   actualFactForSummaryScales: Helped others in life
+  reactionBeingCaught: 
+  reactionCalledLieWrong: Has my work not been seen by those above?
   frontWeight: 4
   actualWeight: 4

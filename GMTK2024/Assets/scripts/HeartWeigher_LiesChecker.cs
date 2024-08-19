@@ -10,8 +10,6 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     Facts_Summary_Text_Sorter facts_Summary_Text_Sorter;
     public GameObject checkLiesButton;
     public SpawnTestWeights heartWeigherScalesSpawner;
-    public Fact currentFactInTheBigBox;
-    [SerializeField] LoadCharacterDisplayText loadCharacterDisplayText;
     [SerializeField] bool previousHeartDespawned = true;
     [SerializeField] float howLongWaitForNewHeartSpawn = 4;
 
@@ -46,22 +44,8 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
         checkLiesButton.GetComponent<UnityEngine.UI.Button>().interactable = false;
     }
 
-
-    public void CheckThisFactDisplayFront(TextMeshProUGUI tmp)
-    {
-
-        //send its front big text box fact to big text box
-        currentFactInTheBigBox = facts_Summary_Text_Sorter.currentFactAndTmpPairs.FirstOrDefault(x => x.Value == tmp).Key;
-        loadCharacterDisplayText.DisplayStringInBigTextBox(currentFactInTheBigBox.frontFact);
-    }
-
-    //connects to "press x to doubt" button
-    public void CheckThisFactButton()
-    {
-        CheckThisFact(currentFactInTheBigBox);
-    }
     //finds the fact by tmp in that pair and checks it
-    public void CheckThisFactTMP(TextMeshProUGUI tmp)
+    public void CheckThisFact(TextMeshProUGUI tmp)
     {
         if (previousHeartDespawned)
         {
@@ -97,9 +81,6 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             heartWeigherScalesSpawner.SpawnHeartLeft(isHeavy: true);
             // spawn the true fact, spawn its weight
             facts_Summary_Text_Sorter.SortFrontFact(fact, isFrontFact: false);
-
-            loadCharacterDisplayText.DisplayStringInBigTextBox(fact.reactionBeingCaught);
-            //change sprite to sad
         }
         else
         {//find this fact in the original list, make it different color
@@ -112,8 +93,6 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontSize *= 1.2f;
             heartWeigherScalesSpawner.SpawnHeartLeft(isHeavy: false);
 
-            loadCharacterDisplayText.DisplayStringInBigTextBox(fact.reactionCalledLieWrong);
-            // change sprite to happy?
         }
         StartCoroutine(CanSpawnNextHeartCounter());
     }

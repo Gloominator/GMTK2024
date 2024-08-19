@@ -17,5 +17,7 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: I won't let it slide
   actualFactForSummaryScales: I won't let it slide
+  reactionBeingCaught: 
+  reactionCalledLieWrong: No really, I don't even care about lying about that.
   frontWeight: -1
   actualWeight: -1

@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Opening_fact
   m_EditorClassIdentifier: 
   question: 
-  frontFact: I lived dedicated to my religion
+  frontFact: Hello, my name is Father Pickle. Is this the afterlife? So it is true,
+    then.. I see. I spent my life dedicated to my religion; from a young age I had
+    been involved in my religion and it really is all I ever got to know.
   isLie: 0
   frontFactForSummaryScales: He was religious
   actualFactForSummaryScales: He was religious
+  reactionBeingCaught: 
+  reactionCalledLieWrong: My faith guided me through most of my life.
   frontWeight: 6
   actualWeight: 6

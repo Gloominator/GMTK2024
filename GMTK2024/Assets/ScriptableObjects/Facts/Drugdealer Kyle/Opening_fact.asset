@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Opening_fact
   m_EditorClassIdentifier: 
   question: 
-  frontFact: I did everything to help someone else and I would do it again
+  frontFact: " I didn\u2019t know this was real. I guess I\u2019ll find out what
+    I deserve. I lived as best as I could with the choices I had. "
   isLie: 0
   frontFactForSummaryScales: Lived for others
   actualFactForSummaryScales: Lived for others
+  reactionBeingCaught: 
+  reactionCalledLieWrong: I promise you those little ones were everything I had lived
+    for.
   frontWeight: 1
   actualWeight: 1

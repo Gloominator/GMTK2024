@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: They lived a good life
   actualFactForSummaryScales: They lived a good life
+  reactionBeingCaught: 
+  reactionCalledLieWrong: It has had it's ups and downs but I lived for my family
+    and can live content with it.
   frontWeight: 3
   actualWeight: 3

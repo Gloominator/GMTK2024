@@ -19,6 +19,9 @@ MonoBehaviour:
     if she had to"
   isLie: 1
   frontFactForSummaryScales: He lived a decent life
-  actualFactForSummaryScales: He's not the most decent guy ever
+  actualFactForSummaryScales: Not a decent guy
+  reactionBeingCaught: I experimented here or there, and I started a few problem
+    but I was always for my family.
+  reactionCalledLieWrong: 
   frontWeight: 0
   actualWeight: -1

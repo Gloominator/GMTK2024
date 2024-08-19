@@ -17,5 +17,7 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: They repent
   actualFactForSummaryScales: They repent
+  reactionBeingCaught: 
+  reactionCalledLieWrong: It has to count for something right?
   frontWeight: 1
   actualWeight: 1

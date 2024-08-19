@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Were_you_close_with_family
   m_EditorClassIdentifier: 
   question: Were you close with your family?
-  frontFact: I had found a family that I gave everything for
+  frontFact: 'Not my original family, basically dead to them, but I found people
+    that needed me and I would d- or would have done anything for them. '
   isLie: 0
   frontFactForSummaryScales: Gave everything to family
   actualFactForSummaryScales: Gave everything to family
+  reactionBeingCaught: 
+  reactionCalledLieWrong: If you had met them you would believe me that they were
+    worth it.
   frontWeight: 5
   actualWeight: 5

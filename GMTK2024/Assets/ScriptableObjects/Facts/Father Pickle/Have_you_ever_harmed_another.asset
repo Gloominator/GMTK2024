@@ -17,5 +17,7 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: He was a pacifist
   actualFactForSummaryScales: He was a pacifist
+  reactionBeingCaught: 
+  reactionCalledLieWrong: No I have been truthful to you about that.
   frontWeight: 2
   actualWeight: 2

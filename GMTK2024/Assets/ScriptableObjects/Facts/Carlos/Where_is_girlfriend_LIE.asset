@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: Thinks he's at the store
   actualFactForSummaryScales: Know's he's at the bar
+  reactionBeingCaught: Okay yeah she probably knows I went to the bar, I never thought
+    I would miss her chewing me out for it.
+  reactionCalledLieWrong: 
   frontWeight: 3
   actualWeight: -3

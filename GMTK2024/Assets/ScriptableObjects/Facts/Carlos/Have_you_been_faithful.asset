@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: He's been faithful
   actualFactForSummaryScales: He's been faithful
+  reactionBeingCaught: 
+  reactionCalledLieWrong: I ain't perfect but that ain't something I would stoop
+    down to man.
   frontWeight: 3
   actualWeight: 3

@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Opening_Fact
   m_EditorClassIdentifier: 
   question: 
-  frontFact: I just want to go wherever my daughter Susan goes
+  frontFact: Tell me, where is my daughter? Has she come through yet? I want to go
+    wherever she is!
   isLie: 0
   frontFactForSummaryScales: Wants to be with Daughter
   actualFactForSummaryScales: Wants to be with Daughter
-  frontWeight: 0
-  actualWeight: 0
+  reactionBeingCaught: 
+  reactionCalledLieWrong: 
+  frontWeight: 1
+  actualWeight: 1

@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: Got into fights
   actualFactForSummaryScales: Killed someone
+  reactionBeingCaught: If you were in my shoes too you would've done the same thing,
+    he deserved it for what he said to me.
+  reactionCalledLieWrong: 
   frontWeight: 3
   actualWeight: -10

@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: Close with her mother
   actualFactForSummaryScales: Uses those around her
+  reactionBeingCaught: She's my mom why wouldn't I use her for everything, aren't
+    parents always supposed to live for this kids?
+  reactionCalledLieWrong: 
   frontWeight: 3
   actualWeight: -3

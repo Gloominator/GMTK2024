@@ -17,5 +17,8 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: Mom wouldn't be happy
   actualFactForSummaryScales: Fights weekly at bar
+  reactionBeingCaught: Okay so I may get into a scuffle here or there, but it's just
+    what me and the guys do when we start really getting into it.
+  reactionCalledLieWrong: 
   frontWeight: 2
   actualWeight: -5

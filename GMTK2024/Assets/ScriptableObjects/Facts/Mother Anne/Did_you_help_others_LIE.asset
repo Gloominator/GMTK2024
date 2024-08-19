@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Did_you_help_others_LIE
   m_EditorClassIdentifier: 
   question: Did you live a life helping others?
-  frontFact: I lived for only myself and my daughter
+  frontFact: I lived for only myself and my daughter, anyone else while trying their
+    best meant n-nothing to me.
   isLie: 1
   frontFactForSummaryScales: They chose family
   actualFactForSummaryScales: Donated to charities
+  reactionBeingCaught: No, no, I gave whatever money I could spare to charities.
+  reactionCalledLieWrong: 
   frontWeight: -1
   actualWeight: 3

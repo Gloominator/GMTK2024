@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: What_do_you_regret_most
   m_EditorClassIdentifier: 
   question: What do you regret most in your life?
-  frontFact: Dying and leaving those kids behind
+  frontFact: "I had the job of protecting the little ones I promised I wouldn\u2019t
+    leave behind, and here I am. Up and died leaving so little behind for them."
   isLie: 0
   frontFactForSummaryScales: He regrets not being enough
   actualFactForSummaryScales: He regrets not being enough
+  reactionBeingCaught: 
+  reactionCalledLieWrong: ...
   frontWeight: 6
   actualWeight: 6

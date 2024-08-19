@@ -17,5 +17,7 @@ MonoBehaviour:
   isLie: 0
   frontFactForSummaryScales: He is a family man
   actualFactForSummaryScales: He is a family man
+  reactionBeingCaught: 
+  reactionCalledLieWrong: Family is everything to me man, I would've died for them.
   frontWeight: 2
   actualWeight: 2

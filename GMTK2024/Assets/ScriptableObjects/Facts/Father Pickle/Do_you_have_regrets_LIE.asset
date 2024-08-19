@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Do_you_have_regrets_LIE
   m_EditorClassIdentifier: 
   question: Do you have regrets?
-  frontFact: I have no regrets in my life
+  frontFact: 'I lived my life content with my path. '
   isLie: 1
   frontFactForSummaryScales: I regret nothing
   actualFactForSummaryScales: Became dissilusioned
+  reactionBeingCaught: "I became disillusioned with what the point of following my
+    faith and wanted more, I wanted to help those but wasn\u2019t sure this was the
+    best way closer to the end of my life. "
+  reactionCalledLieWrong: 
   frontWeight: 1
   actualWeight: -1

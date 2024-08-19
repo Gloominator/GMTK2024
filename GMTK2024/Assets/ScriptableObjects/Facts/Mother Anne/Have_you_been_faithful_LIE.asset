@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Have_you_been_faithful_LIE
   m_EditorClassIdentifier: 
   question: Have you been faithful?
-  frontFact: "I haven\u2019t been faithful in my relationship"
+  frontFact: I haven't been faithful to my husband before he passed, bless his heart,
+    and uhhh... would do it again.
   isLie: 1
   frontFactForSummaryScales: Hasn't been faithful
   actualFactForSummaryScales: Never remarried, was faithful
+  reactionBeingCaught: My husband did pass away not long ago, after 30 years of marriage
+    it was always only him and I didn't have the strength to remarry.
+  reactionCalledLieWrong: 
   frontWeight: -3
   actualWeight: 3
