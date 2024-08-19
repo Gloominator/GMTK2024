@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     public TMP_Text characterText;
     public TMP_Text characterName;
+    public TMP_Text characterTextLongform;
+    public TMP_Text characterNameLongform;
     public TMP_Text feathersOfTruthRemainingText;
     private Vector3 feathersOfTruthAnimationTextOriginalPosition;
     public TMP_Text badVerdictsText;
@@ -22,6 +24,13 @@ public class UIManager : MonoBehaviour
     private DG.Tweening.Sequence animationSequence;
     private float feathersOfTruthAnimationImageOriginalAlpha;
     private float feathersOfTruthAnimationTextOriginalAlpha;
+    
+    public GameObject endGamePanel;
+    public TMP_Text endGame_rankText;
+    public TMP_Text endGame_correctSoulsText;
+    public TMP_Text endGame_evilSoulsIntoHeavenText;
+    public TMP_Text endGame_innoncentSoulsIntoHellText;
+    public TMP_Text endGame_feathersRemainingText;
 
     public GameObject lieDetectorObject;
 
@@ -64,6 +73,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UpdateEndGameTexts()
+    {
+        endGamePanel.SetActive(true);
+
+        endGame_rankText.text = GameManager.instance.rank;
+        endGame_correctSoulsText.text = string.Format("You judged {0} souls correctly", GameManager.instance.correctChoices.ToString());  
+        endGame_evilSoulsIntoHeavenText.text = string.Format("You let {0} evil soul into heaven", GameManager.instance.evilSoulsSentToHeaven.ToString()); 
+        endGame_innoncentSoulsIntoHellText.text = string.Format("You condemned {0} innocent soul to hell", GameManager.instance.innocentSoulsSentToHell.ToString());
+        endGame_feathersRemainingText.text = "remaining: " + GameManager.instance.feathersOfTruth.ToString();
+    }
+
     public void UpdateFeathersOfTruthText(int change)
     {
         feathersOfTruthRemainingText.text = ": " + GameManager.instance.feathersOfTruth;  
@@ -87,7 +107,6 @@ public class UIManager : MonoBehaviour
         }
 
         PlayFeathersOfTruthAnimation();
-
     }
 
     public void PlayFeathersOfTruthAnimation()
@@ -135,7 +154,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateVerdictsText()
     {
-        badVerdictsText.text = "Bad Verdicts: " + GameManager.instance.incorrectChoices;
+        badVerdictsText.text = "Bad Verdicts: " + (GameManager.instance.innocentSoulsSentToHell + GameManager.instance.evilSoulsSentToHeaven).ToString();
     }
 
     public void UpdateCharacterText()

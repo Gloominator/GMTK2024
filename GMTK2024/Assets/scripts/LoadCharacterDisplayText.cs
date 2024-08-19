@@ -24,17 +24,26 @@ public class LoadCharacterDisplayText : MonoBehaviour
         currentCharacter = GameManager.instance.currentCharacterJudged;
     }
 
-   void LoadCharacterText()
+    void LoadCharacterText()
     {
-        UIManager.instance.characterText.text = currentCharacter.facts[0].frontFact; // first pos in the list is the front fact, there's no question
-        UIManager.instance.characterName.text = currentCharacter.characterName;
-        SetAnswerTextRedOrGreen(0);
-        
-        
+        // first pos in the list is the front fact, there's no question
+        if (UIManager.instance.characterTextLongform.text.Length <= 0)
+        {
+            UIManager.instance.characterTextLongform.text += currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(0) + currentCharacter.facts[0].frontFact + "</color>";
+        }
+        else
+        {
+            UIManager.instance.characterTextLongform.text += "\n" + currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(0) + currentCharacter.facts[0].frontFact + "</color>";
+        }
+
+        UIManager.instance.characterNameLongform.text = currentCharacter.characterName;
+        // SetAnswerTextRedOrGreen(0);
+
+
         for (int i = 1; i < chat.Count; i++)
         {
             if (chat[i] == null) return;
-            
+
             chat[i].text = currentCharacter.facts[i].question;
         }
     }
@@ -46,16 +55,16 @@ public class LoadCharacterDisplayText : MonoBehaviour
         factSorter.SortFrontFact(currentCharacter.facts[0], isFrontFact: true);
         characterSR.sprite = currentCharacter.characterSprite;
     }
-    
+
 
     public void PressQuestion(int index)
     {
         //shows the answer to your question
-        chat[0].text = currentCharacter.facts[index].frontFact;
+        chat[0].text += "\n" + currentCharacter.characterName + ": " + SetAnswerTextRedOrGreen(index) + currentCharacter.facts[index].frontFact + "</color>";
 
 
         //greens or reds it depending on the weight
-        SetAnswerTextRedOrGreen(index);
+        // SetAnswerTextRedOrGreen(index);
 
 
         //puts this fact near the summarizing scales (green or red)
@@ -73,15 +82,30 @@ public class LoadCharacterDisplayText : MonoBehaviour
     }
 
 
-    void SetAnswerTextRedOrGreen(int factIndex)
+    // void SetAnswerTextRedOrGreen(int factIndex)
+    // {
+    //     if (currentCharacter.facts[factIndex].frontWeight >= 0)
+    //     {
+    //         chat[0].color = Color.green;
+    //     }
+    //     else
+    //     {
+    //         chat[0].color = Color.red;
+    //     }
+    // }
+
+    public string SetAnswerTextRedOrGreen(int factIndex)
     {
         if (currentCharacter.facts[factIndex].frontWeight >= 0)
         {
-            chat[0].color = Color.green;
+            return "<color=green>";
         }
         else
         {
-            chat[0].color = Color.red;
+            return "<color=red>";
         }
     }
 }
+
+
+

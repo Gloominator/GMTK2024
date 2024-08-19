@@ -10,10 +10,14 @@ public class GameManager : MonoBehaviour
     public List<Character> characters;
     public LoadCharacterDisplayText loadCharacterDisplayText;
     public Character currentCharacterJudged;
+    public List<Character> charactersJudged;
     public AllUIRefs allUIRefs;
 
     public int feathersOfTruth;
-    public int incorrectChoices;
+    public int correctChoices;
+    public int evilSoulsSentToHeaven;
+    public int innocentSoulsSentToHell;
+    public string rank;
     public BubbleGenerator bubbleGenerator;
     public static GameManager instance;
     private void Awake()
@@ -22,7 +26,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
+
             DontDestroyOnLoad(this);
         }
         else
@@ -33,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        // if (feathersOfTruth <= 0 || incorrectChoices < -3)
+        // if (feathersOfTruth <= 0 || innocentSoulsSentToHell; < -3)
         // {
         //     GameOver();
         // }
@@ -51,36 +55,100 @@ public class GameManager : MonoBehaviour
         allUIRefs = FindObjectOfType<AllUIRefs>();
 
         currentCharacterJudged = characters[Random.Range(0, characters.Count)];
+        charactersJudged.Add(currentCharacterJudged);
         loadCharacterDisplayText.LoadCharacterText(currentCharacterJudged);
     }
 
     public void Judge()
-    { 
+    {
         allUIRefs.HideUIJudge();
         UIManager.instance.inVerdictState = true;
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         // TODO: IMPLEMENT ACTUAL GAME OVER LOGIC
+        GetRank();
+        UIManager.instance.UpdateEndGameTexts();
+
         Debug.Log("Game Over");
     }
-   
+
+    public void GetRank()
+    {
+        int score = 0;
+
+        Debug.Log("Get Rank");
+        Debug.Log("feathersOfTruth: " + feathersOfTruth);
+        Debug.Log("correctChoices: " + correctChoices);
+        Debug.Log("innocentSoulsSentToHell: " + innocentSoulsSentToHell);
+        Debug.Log("evilSoulsSentToHeaven: " + evilSoulsSentToHeaven);
+
+        score += feathersOfTruth * 100;
+        score += correctChoices * 100;
+        score -= innocentSoulsSentToHell *100;
+        score -= evilSoulsSentToHeaven * 100;
+
+        Debug.Log("Score: " + score);
+
+
+        if (score >= 800)
+        {
+            rank = "The Almighty";
+        }
+        else if (score >= 700)
+        {
+            rank = "Master of the Gate";
+        }
+        else if (score >= 600)
+        {
+            rank = "Wise Angel";
+        }
+        else if (score >= 500)
+        {
+            rank = "Soul Keeper";
+        }
+        else if (score >= 400)
+        {
+            rank = "Drowzy Night Watcher";
+        }
+        else if (score >= 300)
+        {
+            rank = "Corruptible Judge";
+        }
+        else if (score >= 200)
+        {
+            rank = "Devil's Advocate";
+        }
+        else 
+        {
+            rank = "Forsaken";
+        }
+    }
+
     public void HeavenOrHellChoose(bool isHeaven)
     {
-        if ((isHeaven && currentCharacterJudged.shouldGoToHeaven) || !isHeaven && !currentCharacterJudged.shouldGoToHeaven)
+        if (isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
-            // NO POINTS ARE LOST
-            UIManager.instance.UpdateVerdictsText();
+            correctChoices += 1;
         }
-        else
+        else if (!isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
-            // LOSE POINTS
-            incorrectChoices += 1;
-            UIManager.instance.UpdateVerdictsText();
+            innocentSoulsSentToHell += 1;
         }
-       FindObjectOfType<Facts_Summary_Text_Sorter>().ShowTrueFacts();
-       allUIRefs.ShowNextLevelButton();
+        else if (isHeaven && !currentCharacterJudged.shouldGoToHeaven)
+        {
+            evilSoulsSentToHeaven += 1;
+        }
+        else if (!isHeaven && !currentCharacterJudged.shouldGoToHeaven)
+        {
+            correctChoices += 1;
+        }
+
+        UIManager.instance.UpdateVerdictsText();
+
+        FindObjectOfType<Facts_Summary_Text_Sorter>().ShowTrueFacts();
+        allUIRefs.ShowNextLevelButton();
     }
 
     public void RestartScene()

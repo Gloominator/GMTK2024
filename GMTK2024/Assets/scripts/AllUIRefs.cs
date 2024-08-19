@@ -79,9 +79,20 @@ public class AllUIRefs : MonoBehaviour
         // 4. Update all text to reflect info in new character?
         ResetUIToDefaultState();
         bubbleGenerator.ClearBubbles();
+        UIManager.instance.characterTextLongform.text = "";
 
-        GameManager.instance.currentCharacterJudged =
-            GameManager.instance.characters[Random.Range(0, GameManager.instance.characters.Count)];
+        if (GameManager.instance.charactersJudged.Count == GameManager.instance.characters.Count)
+        {
+            // GAME OVER
+            GameManager.instance.GameOver();
+            return;
+        }
+
+        while (GameManager.instance.charactersJudged.Contains(GameManager.instance.currentCharacterJudged))
+        {
+            GameManager.instance.currentCharacterJudged = GameManager.instance.characters[Random.Range(0, GameManager.instance.characters.Count)];
+        }
+        GameManager.instance.charactersJudged.Add(GameManager.instance.currentCharacterJudged);
 
         GameManager.instance.loadCharacterDisplayText.LoadCharacterText(GameManager.instance.currentCharacterJudged);
 
