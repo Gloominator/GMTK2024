@@ -23,6 +23,13 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
 
     public void SortFrontFact(Fact fact, bool isFrontFact)
     {
+        // if fact exists in dictionary, skip it
+        if (currentFactAndTmpPairs.ContainsKey(fact))
+        {
+            return;
+        }
+
+
         if (isFrontFact)
         {
             if (fact.frontWeight >= 0)
