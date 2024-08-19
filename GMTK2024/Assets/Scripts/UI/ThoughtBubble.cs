@@ -10,7 +10,7 @@ public class ThoughtBubble : MonoBehaviour
     public string question;
     public int index;
 
-    public bool hasBeenClicked;
+    public bool hasBeenClicked = false;
     
     public TMP_Text questionText;
     

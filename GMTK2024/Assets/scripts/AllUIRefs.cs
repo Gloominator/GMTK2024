@@ -106,5 +106,8 @@ public class AllUIRefs : MonoBehaviour
         // I don't know if im missing any steps, I am falling asleep at my desk right now.
         // If any questions are had, just send me a DM and I'll answer what I can when I
         // wake up.
+        
+        // I was missing this step... duh
+        nextLevelButton.SetActive(false);
     }
 }

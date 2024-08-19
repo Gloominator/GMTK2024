@@ -76,15 +76,13 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
     void CheckThisFact(Fact fact)
     {
-        GameManager.instance.feathersOfTruth -= 1;
-        UIManager.instance.UpdateFeathersOfTruthText(-1);
-
         facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
         if (fact.isLie)
         {
             // player gets a bonus feather for finding a lie
             GameManager.instance.feathersOfTruth += 2;
             UIManager.instance.UpdateFeathersOfTruthText(2);
+
             //find this fact in the original list, make it different color, strike it through
             //remove its weight from the scales
 
@@ -104,11 +102,11 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             //change sprite to sad
         }
         else
-        {//find this fact in the original list, make it different color
-         // player loses a feather for questioning a truth
-            GameManager.instance.feathersOfTruth -= 1;
-            UIManager.instance.UpdateFeathersOfTruthText(-1);
-
+        {
+            //find this fact in the original list, make it different color
+            // player loses a feather for questioning a truth
+             GameManager.instance.feathersOfTruth -= 1;
+             UIManager.instance.UpdateFeathersOfTruthText(-1);
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].color = Color.green;
             //increase its size 1.2x
             //facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontSize *= 1.2f;

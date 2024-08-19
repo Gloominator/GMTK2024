@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     public TMP_Text badVerdictsText;
     public LoadCharacterDisplayText loadCharacterDisplayText;
 
+    public Button checkLieButton;
+    
     public TMP_Text feathersOfTruthAnimationText;
     public Image feathersOfTruthAnimationImage;
     private DG.Tweening.Sequence animationSequence;
