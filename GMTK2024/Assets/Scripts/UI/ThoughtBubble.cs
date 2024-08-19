@@ -9,6 +9,8 @@ public class ThoughtBubble : MonoBehaviour
 {
     public string question;
     public int index;
+
+    public bool hasBeenClicked;
     
     public TMP_Text questionText;
     
@@ -26,7 +28,7 @@ public class ThoughtBubble : MonoBehaviour
     void TaskOnClick()
     {
         _loadCharacterDisplayText.PressQuestion(index);
-        gameObject.SetActive(false);
+        hasBeenClicked = true;
     }
 
     public void UpdateText()
