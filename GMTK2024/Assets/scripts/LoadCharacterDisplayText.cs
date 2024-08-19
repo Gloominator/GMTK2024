@@ -9,11 +9,21 @@ public class LoadCharacterDisplayText : MonoBehaviour
 {
     public List<TextMeshProUGUI> chat;
     public Character currentCharacter;
-    [SerializeField] Facts_Summary_Text_Sorter factSorter;
+   
+
+    HeartWeigher_LiesChecker heartWeigherLiesChecker;
+    Facts_Summary_Text_Sorter factSorter;
     [SerializeField] Image characterSR;
 
     public int questionsRemaining;
-    // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        heartWeigherLiesChecker = GetComponent<HeartWeigher_LiesChecker>();
+        factSorter = GetComponent<Facts_Summary_Text_Sorter>();
+    }
+
     void Start()
     {
         UpdateCurrentCharacter();
@@ -46,6 +56,8 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
             chat[i].text = currentCharacter.facts[i].question;
         }
+
+        heartWeigherLiesChecker.currentFactInTheBigBox = currentCharacter.facts[0]; //obj ref for call lie button
     }
 
     public void LoadCharacterText(Character character)
@@ -81,6 +93,10 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
     }
 
+    public void DisplayStringInBigTextBox(string text)
+    {
+        chat[0].text = text;
+    }
 
     // void SetAnswerTextRedOrGreen(int factIndex)
     // {

@@ -15,8 +15,8 @@ MonoBehaviour:
   question: Where is your girlfriend now?
   frontFact: "Probably at home, wondering when I\u2019ll get back from the store"
   isLie: 1
-  frontFactForSummaryScales: Thinks he's at the store
-  actualFactForSummaryScales: Know's he's at the bar
+  frontFactForSummaryScales: He's a family man
+  actualFactForSummaryScales: He's a regular at bars
   reactionBeingCaught: Okay yeah she probably knows I went to the bar, I never thought
     I would miss her chewing me out for it.
   reactionCalledLieWrong: 
