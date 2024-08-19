@@ -29,7 +29,7 @@ public class ThoughtBubble : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
         questionText.text = question;
     }
