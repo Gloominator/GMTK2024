@@ -78,7 +78,6 @@ public class AllUIRefs : MonoBehaviour
         // 2. Populate next character to be judged
         // 4. Update all text to reflect info in new character?
         ResetUIToDefaultState();
-        bubbleGenerator.ClearBubbles();
         UIManager.instance.characterTextLongform.text = "";
 
         if (GameManager.instance.charactersJudged.Count == GameManager.instance.characters.Count)

@@ -21,9 +21,9 @@ MonoBehaviour:
   summedFrontKarma: 1
   summedActualKarma: -1
   characterName: Carlos
-  characterSprite: {fileID: 21300000, guid: d0cd494b6c1d1ba499649dda3db74e7e, type: 3}
-  spriteSad: {fileID: 21300000, guid: 5826cde43d8351747a37d4f2397b9952, type: 3}
-  spriteHappy: {fileID: 21300000, guid: 40e6f086640750d4bb87fa5ff0474a7d, type: 3}
-  spriteJudgement: {fileID: 21300000, guid: 38500299dfe54fc4389508b0a5543afa, type: 3}
+  characterSprite: {fileID: 21300000, guid: e594ae375f6a3ba4abe69bf8dc098afd, type: 3}
+  spriteSad: {fileID: 21300000, guid: 56edc4cfa0515bc4197a246af20f33fa, type: 3}
+  spriteHappy: {fileID: 21300000, guid: d51096f4e9bdc5049a575f85be83f055, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: ba6f60ace19d15448a0b1537e1b343ba, type: 3}
   karma: 0
   shouldGoToHeaven: 0

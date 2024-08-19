@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
 
         FindObjectOfType<Facts_Summary_Text_Sorter>().ShowTrueFacts();
         allUIRefs.ShowNextLevelButton();
+        bubbleGenerator.GenerateBubblesOnStart();
     }
 
     public void RestartScene()

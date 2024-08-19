@@ -59,7 +59,7 @@ namespace MainMenu
         public void StartGame()
         {
             Debug.Log("Game Start");
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("Main-UIRework");
 
         }
         

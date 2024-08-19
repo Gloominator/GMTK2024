@@ -111,7 +111,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
             facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].color = Color.green;
             //increase its size 1.2x
-            facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontSize *= 1.2f;
+            //facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontSize *= 1.2f;
             heartWeigherScalesSpawner.SpawnHeartLeft(isHeavy: false);
 
             loadCharacterDisplayText.DisplayStringInBigTextBox(fact.reactionCalledLieWrong);

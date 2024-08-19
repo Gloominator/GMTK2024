@@ -10,33 +10,26 @@ public class BubbleGenerator : MonoBehaviour
     public float bubbleMinDistanceRadius;
     public float exclusionZoneRadius;
 
+   
+
     public int bubblesToGenerate;
 
     public GameObject bubblePrefab;
 
     public List<GameObject> bubbles;
-
-
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
         GenerateBubblesOnStart();
     }
-
-
-
+    
     public void GenerateBubblesOnStart()
     {
         GenerateBubble();
     }
-
-    public void ClearBubbles()
-    {
-        bubbles.Clear();
-    }
-
+    
     void GenerateBubble()
     {
         for (int i = 0; i < bubblesToGenerate; i++)
