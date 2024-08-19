@@ -22,5 +22,8 @@ MonoBehaviour:
   summedActualKarma: 13
   characterName: Anne
   characterSprite: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
+  spriteSad: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
   karma: 0
   shouldGoToHeaven: 1

@@ -16,7 +16,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
     [SerializeField] Image characterSR;
 
     public int questionsRemaining;
-
+    public int callFrameDelay = 2;
 
     private void Awake()
     {
@@ -54,7 +54,8 @@ public class LoadCharacterDisplayText : MonoBehaviour
         {
             if (chat[i] == null) return;
 
-            chat[i].text = currentCharacter.facts[i].question;
+            //chat[i].text = currentCharacter.facts[i].question;
+            CallTypeSentence(currentCharacter.facts[i].question, callFrameDelay);
         }
 
         heartWeigherLiesChecker.currentFactInTheBigBox = currentCharacter.facts[0]; //obj ref for call lie button
@@ -65,18 +66,21 @@ public class LoadCharacterDisplayText : MonoBehaviour
         currentCharacter = character;
         LoadCharacterText();
         factSorter.SortFrontFact(currentCharacter.facts[0], isFrontFact: true);
-        characterSR.sprite = currentCharacter.characterSprite;
+        ChangeCurrentCharacterSprite(currentCharacter.characterSprite);
     }
 
-
+    public void ChangeCurrentCharacterSprite(Sprite sprite)
+        
+    {
+        characterSR.sprite = sprite;
+    }
     public void PressQuestion(int index)
     {
         //shows the answer to your question
-        chat[0].text = currentCharacter.facts[index].frontFact;
+        //chat[0].text = currentCharacter.facts[index].frontFact;
+        CallTypeSentence(currentCharacter.facts[index].frontFact, callFrameDelay); 
 
-
-        //greens or reds it depending on the weight
-        // SetAnswerTextRedOrGreen(index);
+        ChangeCurrentCharacterSprite(currentCharacter.characterSprite); // sets it to normal again
 
 
         //puts this fact near the summarizing scales (green or red)
@@ -84,9 +88,6 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
 
 
-        //disables the pressed button and greys out the text              
-        //chat[index].GetComponent<Button>().interactable = false;
-        //chat[index].color = Color.gray;
         UIManager.instance.questionsRemaining -= 1;
 
 
@@ -95,7 +96,8 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
     public void DisplayStringInBigTextBox(string text)
     {
-        chat[0].text = text;
+       // chat[0].text = text;
+        CallTypeSentence(text, callFrameDelay);
     }
 
     // void SetAnswerTextRedOrGreen(int factIndex)
@@ -120,6 +122,26 @@ public class LoadCharacterDisplayText : MonoBehaviour
         {
             return "<color=red>";
         }
+    }
+
+    public void CallTypeSentence(string sententence, int callFrameDelay)
+    {
+        StopAllCoroutines(); // stops any running typesentences
+        StartCoroutine(TypeSentence(sententence, callFrameDelay));
+    }
+    IEnumerator TypeSentence(string sentence, int callFrameDelay)
+    {
+        //add speaking sound effect here?
+        chat[0].text = "";
+        foreach(char letter in sentence.ToCharArray())
+        {
+            chat[0].text += letter;
+            for (int i = 0; i < callFrameDelay; i++)
+            {
+                yield return null;
+            }
+        }
+
     }
 }
 

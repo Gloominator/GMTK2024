@@ -22,5 +22,8 @@ MonoBehaviour:
   summedActualKarma: 9
   characterName: Father Pickle
   characterSprite: {fileID: 21300000, guid: 21b52f54c19b10a4185af50657d8bae1, type: 3}
+  spriteSad: {fileID: 21300000, guid: fa476014a25ee1d47a9671c9071d366f, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 7dd1eedacfe48fe44bc41cf3a133f70a, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 6f99418f4a406d34eadff9f1f2bc9d54, type: 3}
   karma: 0
   shouldGoToHeaven: 1

@@ -22,5 +22,8 @@ MonoBehaviour:
   summedActualKarma: 3
   characterName: Kyle
   characterSprite: {fileID: 21300000, guid: cbb5a4c872e411f4f9ba36e8b1cde3ef, type: 3}
+  spriteSad: {fileID: 21300000, guid: 1c2840b0e0436a441b7713dc21854b68, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 94878ce0c2795284bbba885482730d47, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 81cb493a5cf74054191a0143753de017, type: 3}
   karma: 0
   shouldGoToHeaven: 1

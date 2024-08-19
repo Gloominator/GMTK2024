@@ -100,6 +100,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             facts_Summary_Text_Sorter.SortFrontFact(fact, isFrontFact: false);
 
             loadCharacterDisplayText.DisplayStringInBigTextBox(fact.reactionBeingCaught);
+            loadCharacterDisplayText.ChangeCurrentCharacterSprite(loadCharacterDisplayText.currentCharacter.spriteSad);
             //change sprite to sad
         }
         else
@@ -115,6 +116,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
             loadCharacterDisplayText.DisplayStringInBigTextBox(fact.reactionCalledLieWrong);
             // change sprite to happy?
+            loadCharacterDisplayText.ChangeCurrentCharacterSprite(loadCharacterDisplayText.currentCharacter.spriteHappy);
         }
         StartCoroutine(CanSpawnNextHeartCounter());
     }

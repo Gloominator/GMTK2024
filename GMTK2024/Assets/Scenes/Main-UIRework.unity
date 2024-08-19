@@ -3749,9 +3749,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 910786096}
-        m_TargetAssemblyTypeName: AllUIRefs, Assembly-CSharp
-        m_MethodName: Judge
+      - m_Target: {fileID: 910786095}
+        m_TargetAssemblyTypeName: HeartWeigher_LiesChecker, Assembly-CSharp
+        m_MethodName: CheckThisFactButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5601,6 +5601,7 @@ MonoBehaviour:
   currentCharacter: {fileID: 0}
   characterSR: {fileID: 2101046604}
   questionsRemaining: 0
+  callFrameDelay: 5
 --- !u!114 &910786093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5675,7 +5676,7 @@ MonoBehaviour:
   previousHeartDespawned: 1
   howLongWaitForNewHeartSpawn: 4
   currentFactInTheBigBox: {fileID: 0}
-  loadCharacterDisplayText: {fileID: 0}
+  loadCharacterDisplayText: {fileID: 910786092}
 --- !u!114 &910786096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6712,6 +6713,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4460545cfa010dd44bb6146c99fc122f, type: 2}
   - {fileID: 11400000, guid: 7366047407ee30148abae9bd201c3cf0, type: 2}
   - {fileID: 11400000, guid: d0a415bf8966521419ac52671d339652, type: 2}
+  - {fileID: 11400000, guid: 164b69424b494744b82895b36182a157, type: 2}
   loadCharacterDisplayText: {fileID: 910786092}
   currentCharacterJudged: {fileID: 0}
   charactersJudged: []

@@ -22,4 +22,8 @@ MonoBehaviour:
   summedActualKarma: -13
   characterName: Guy
   characterSprite: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
+  spriteSad: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 3d1cba9a5b8c72147ace78ea5cdab68e, type: 3}
   karma: 0
+  shouldGoToHeaven: 0

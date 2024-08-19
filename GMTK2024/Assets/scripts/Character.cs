@@ -11,6 +11,9 @@ public class Character : ScriptableObject
     [SerializeField] int summedActualKarma;
     public string characterName;
     public Sprite characterSprite;
+    public Sprite spriteSad;
+    public Sprite spriteHappy;
+    public Sprite spriteJudgement;
     [HideInInspector] public int karma;
 
     public bool shouldGoToHeaven;
