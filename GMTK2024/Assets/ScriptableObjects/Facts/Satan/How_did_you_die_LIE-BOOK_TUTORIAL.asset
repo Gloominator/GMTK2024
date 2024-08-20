@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478d30c84459c144a884417133d45cab, type: 3}
+  m_Name: How_did_you_die_LIE-BOOK_TUTORIAL
+  m_EditorClassIdentifier: 
+  question: What brought you here?
+  frontFact: How I died? Well it involved some issues with me and my dad, you definitely
+    know the rest though.
+  isLie: 0
+  frontFactForSummaryScales: Dad Issues?
+  actualFactForSummaryScales: Dad Issues
+  reactionBeingCaught: 
+  reactionCalledLieWrong: ' I wasn''t lying about me and father dearest but hey I
+    noticed that book you got to the side, make sure you''re really paying attention
+    to what we are saying, some people out there won''t always be as truthful as
+    me, and people will lie about anything.'
+  frontWeight: 0
+  actualWeight: 0
