@@ -26,4 +26,8 @@ MonoBehaviour:
   spriteHappy: {fileID: 21300000, guid: 94878ce0c2795284bbba885482730d47, type: 3}
   spriteJudgement: {fileID: 21300000, guid: 81cb493a5cf74054191a0143753de017, type: 3}
   karma: 0
+  heavenResponse: "I don\u2019t know what to say, I just hope the little ones forgive
+    me."
+  hellResponse: "I can\u2019t really say I\u2019m surprised with the life I lived,
+    I just hope the little ones fight on."
   shouldGoToHeaven: 1

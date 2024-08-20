@@ -24,4 +24,7 @@ MonoBehaviour:
   spriteHappy: {fileID: 21300000, guid: 73f3b5a7a67cd3b48bd5592c53d67469, type: 3}
   spriteJudgement: {fileID: 21300000, guid: 23bdba92dd738d8478f1889ff94c3ad4, type: 3}
   karma: 0
+  heavenResponse: Perfect, perfect. Just perfect!
+  hellResponse: Alright, alright, enough tricks, I'll stop holding up the line for
+    you. Next guy's the real deal. Promise. Or is he?
   shouldGoToHeaven: 0

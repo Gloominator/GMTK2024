@@ -26,4 +26,8 @@ MonoBehaviour:
   spriteHappy: {fileID: 21300000, guid: d51096f4e9bdc5049a575f85be83f055, type: 3}
   spriteJudgement: {fileID: 21300000, guid: ba6f60ace19d15448a0b1537e1b343ba, type: 3}
   karma: 0
+  heavenResponse: Wait? Seriously!? Just like that? I'm not one to look a gift horse
+    in the mouth.
+  hellResponse: Wait I know I haven't been perfect in life but this is a little extreme
+    right?!
   shouldGoToHeaven: 0
