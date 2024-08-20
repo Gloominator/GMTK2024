@@ -161,7 +161,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             // player loses a feather for questioning a truth
              GameManager.instance.feathersOfTruth -= 1;
              UIManager.instance.UpdateFeathersOfTruthText(-1);
-            facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].color = Color.green;
+            //facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].color = Color.green;
             //increase its size 1.2x
             //facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].fontSize *= 1.2f;
             heartWeigherScalesSpawner.SpawnHeartLeft(isHeavy: false);
