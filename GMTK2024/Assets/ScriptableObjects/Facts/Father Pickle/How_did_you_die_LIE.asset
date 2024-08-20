@@ -19,7 +19,7 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: I died of old age
   actualFactForSummaryScales: Died of "Freaky" accident
-  reactionBeingCaught: "Okay okay I had participated in some \u201Cparties\u201D
+  reactionBeingCaught: "Okay, okay I had participated in some \u201Cparties\u201D
     to say the least and it was a little too much for my poor heart."
   reactionCalledLieWrong: 
   frontWeight: 0

@@ -17,9 +17,9 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: Sold medicine
   actualFactForSummaryScales: Sold drugs
-  reactionBeingCaught: "Okay so I was completely forthcoming and Im not gonna try
-    and lie to an angel\u2026 thing\u2026? a second time so I was dealing for cash
-    for all of us."
+  reactionBeingCaught: "Okay so I wasn't completely forthcoming and I'm not gonna
+    try and lie to an angel\u2026 thing\u2026? a second time. So I was dealing for
+    cash for all of us."
   reactionCalledLieWrong: 
   frontWeight: 2
   actualWeight: -4
