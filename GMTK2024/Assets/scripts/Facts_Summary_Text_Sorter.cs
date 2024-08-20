@@ -55,6 +55,7 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
                 factWeightObjectPairs.Add(fact, scalesSpawnerFactsSummary.SpawnObjLeft(Mathf.Abs(fact.frontWeight)));
             }
         }
+
         else if (!isFrontFact)
         {
             if (fact.actualWeight >= 0)
@@ -237,6 +238,9 @@ public class Facts_Summary_Text_Sorter : MonoBehaviour
         {
             goodFactsTMP[i].GetComponent<Button>().interactable = true;
             badFactsTMP[i].GetComponent<Button>().interactable = true;
+            goodFactsTMP[i].fontStyle = FontStyles.Normal; // fixing a bug when strikethrough would remain for the next char
+            badFactsTMP[i].fontStyle = FontStyles.Normal;
+
         }
 
         factWeightObjectPairs.Clear();

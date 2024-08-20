@@ -49,6 +49,8 @@ public class SpawnTestWeights : MonoBehaviour
         if (isHeavy)
         {
              instantiatedWeight = Instantiate(heartPrefab, spawnPointLeft.transform.position, Quaternion.identity);
+           
+             
 
 
 
@@ -67,6 +69,7 @@ public class SpawnTestWeights : MonoBehaviour
             scales_Balance_Calc.AddWeight(lightHeartWeight, SpawnPlace.Left);
         }
 
+        instantiatedWeight.transform.parent = this.transform; // makes sure the heart disappears with scales
 
         //despawn heart, spawn feather after a while
         Destroy(instantiatedWeight, howLongWaitForNewHeartSpawn);
@@ -78,6 +81,7 @@ public class SpawnTestWeights : MonoBehaviour
     {
         yield return new WaitForSeconds(howLongWaitForNewHeartSpawn);
         GameObject feather = Instantiate(featherPrefab, spawnPointRight.transform.position, Quaternion.identity);
+        feather.transform.parent = this.transform.parent; // makes sure the feather disapepars with scales
         currentFeather = feather;
         DeleteOnClick thisInstantiatedObjScript = feather.GetComponent<DeleteOnClick>();
         thisInstantiatedObjScript.SetWeightAndSpawnPlace(0, SpawnPlace.Right);

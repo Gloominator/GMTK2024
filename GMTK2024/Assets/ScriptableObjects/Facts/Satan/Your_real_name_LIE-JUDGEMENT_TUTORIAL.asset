@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Your_real_name_LIE-JUDGEMENT_TUTORIAL
   m_EditorClassIdentifier: 
   question: What is your real name?
-  frontFact: Hard of hearing? I already told you didn't I just call me John.
+  frontFact: Hard of hearing? I already told you I'm John.
   isLie: 1
   frontFactForSummaryScales: John?
   actualFactForSummaryScales: Satan

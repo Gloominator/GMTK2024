@@ -17,7 +17,7 @@ public class Scales_Balance_Calc : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         initialRotation = transform.rotation.eulerAngles.z;

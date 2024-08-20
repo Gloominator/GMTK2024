@@ -140,6 +140,9 @@ public class UIManager : MonoBehaviour
     public void ShowStageCompleteMenu()
     {
         GameManager.instance.ShowStageCompleteMenu();
+
+
+        allUIRefs.ResetVignette();
     }
 
     public void AnimateFeathersOfTruthText(int change)

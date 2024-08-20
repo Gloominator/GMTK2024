@@ -28,7 +28,8 @@ public class AllUIRefs : MonoBehaviour
 
     public GameManager gameManager;
 
-    public Facts_Summary_Text_Sorter facts_Summary_Text_Sorter;
+   Facts_Summary_Text_Sorter facts_Summary_Text_Sorter;
+    HeartWeigher_LiesChecker heartWeigher_LiesChecker;
 
     public BubbleGenerator bubbleGenerator;
 
@@ -36,7 +37,8 @@ public class AllUIRefs : MonoBehaviour
 
     private void Start()
     {
-       
+        heartWeigher_LiesChecker = GetComponent<HeartWeigher_LiesChecker>();
+        facts_Summary_Text_Sorter = GetComponent<Facts_Summary_Text_Sorter>();
     }
 
     public void ReactionState(bool isHeaven)
@@ -113,6 +115,12 @@ public class AllUIRefs : MonoBehaviour
     {
         gameManager.HeavenOrHellChoose(isHeaven);
         UIJudgeObj.SetActive(false);
+
+
+        if (isHeaven)
+            StartCoroutine( heartWeigher_LiesChecker.VignetteHeaven() );
+        else
+            StartCoroutine(heartWeigher_LiesChecker.VignetteHell());
     }
 
     // REPLACED NEXT LEVEL FUNCTION
@@ -130,15 +138,23 @@ public class AllUIRefs : MonoBehaviour
 
         if (GameManager.instance.charactersJudged.Count == GameManager.instance.characters.Count)
         {
-            // GAME OVER
+           
             GameManager.instance.GameOver();
             return;
         }
 
-        while (GameManager.instance.charactersJudged.Contains(GameManager.instance.currentCharacterJudged))
+       
+        //Characters now go in fixed order 0-list.count
+        for (int i = 0; i < GameManager.instance.characters.Count; i++)
         {
-            GameManager.instance.currentCharacterJudged = GameManager.instance.characters[Random.Range(0, GameManager.instance.characters.Count)];
+            var character = GameManager.instance.characters[i];
+            if (!GameManager.instance.charactersJudged.Contains(character))
+            {
+                GameManager.instance.currentCharacterJudged = character;
+                break;
+            }
         }
+
         GameManager.instance.charactersJudged.Add(GameManager.instance.currentCharacterJudged);
 
         GameManager.instance.loadCharacterDisplayText.LoadCharacterText(GameManager.instance.currentCharacterJudged);
@@ -161,5 +177,12 @@ public class AllUIRefs : MonoBehaviour
         UIManager.instance.decisionAnimator.SetBool("isJudging", false);
         
         nextLevelButton.SetActive(false);
+
+       
+    }
+
+    public void ResetVignette()
+    {
+        StartCoroutine(heartWeigher_LiesChecker.ResetVignetteLerpZeroWhite ());
     }
 }

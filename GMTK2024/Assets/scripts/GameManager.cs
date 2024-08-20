@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         loadCharacterDisplayText = FindObjectOfType<LoadCharacterDisplayText>();
         allUIRefs = FindObjectOfType<AllUIRefs>();
 
-        currentCharacterJudged = characters[5];
+        currentCharacterJudged = characters[0];
         charactersJudged.Add(currentCharacterJudged);
         loadCharacterDisplayText.LoadCharacterText(currentCharacterJudged);
     }

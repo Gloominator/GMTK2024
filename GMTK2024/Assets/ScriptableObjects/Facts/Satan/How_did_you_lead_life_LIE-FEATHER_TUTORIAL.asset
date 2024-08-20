@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: How_did_you_lead_life_LIE-FEATHER_TUTORIAL
   m_EditorClassIdentifier: 
   question: How did you lead your life?
-  frontFact: I spent it first guiding others but now is spent punishing the wicked.
+  frontFact: I spent it first guiding others but now it is spent punishing the wicked.
   isLie: 1
   frontFactForSummaryScales: A judge?
   actualFactForSummaryScales: A judge?
