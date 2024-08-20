@@ -102,9 +102,11 @@ public class AllUIRefs : MonoBehaviour
         if (GameManager.instance.currentVerdict)
         {
             verdictResultText.text = "Good Verdict!";
+            AudioManager.instance.PlayGameplaySFX(GameManager.instance.endGameSFXGood);
         }
         else
         {
+            AudioManager.instance.PlayGameplaySFX(GameManager.instance.endGameSFXBad);
             verdictResultText.text = "Bad Verdict";
         }
     }
