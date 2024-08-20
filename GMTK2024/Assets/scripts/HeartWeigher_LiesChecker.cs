@@ -34,6 +34,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     public Color lyingColor;
     public Color vignetteFadeInColor;
 
+    public GameObject lieCheckButton;
     
     void Start()
     {
@@ -90,6 +91,13 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     //connects to "press x to doubt" button
     public void CheckThisFactButton()
     {
+        if (GameManager.instance.feathersOfTruth <= 0)
+        {
+            //set the button grey
+            lieCheckButton.GetComponent<Button>().interactable = false;
+            Debug.Log("You have no feathers left");
+            return;
+        }
         if (previousHeartDespawned)
         {
             if (factsChecked.Contains(currentFactInTheBigBox))
@@ -124,6 +132,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
     void CheckThisFact(Fact fact)
     {
+       
         facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
         if (fact.isLie)
         {
