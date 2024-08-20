@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Have you been faithful?
   frontFact: I haven't been faithful to my husband before he passed, bless his heart,
-    and uhhh... would do it again.
+    and um... I would have done it again.
   isLie: 1
   frontFactForSummaryScales: Hasn't been faithful
   actualFactForSummaryScales: Never remarried, was faithful

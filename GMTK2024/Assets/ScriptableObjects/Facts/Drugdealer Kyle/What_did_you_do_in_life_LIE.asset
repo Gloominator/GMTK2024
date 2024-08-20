@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: What_did_you_do_in_life_LIE
   m_EditorClassIdentifier: 
   question: What did you do for your profession?
-  frontFact: I sell medicinal goods to those in need
+  frontFact: I sell medicinal goods to those in need.
   isLie: 1
   frontFactForSummaryScales: Sold medicine
   actualFactForSummaryScales: Sold drugs
   reactionBeingCaught: "Okay so I was completely forthcoming and Im not gonna try
-    and lie to an angel\u2026 thing\u2026? a second time so I was dealing for cash
+    and lie to an angel\u2026 thing\u2026? a second time. So I was dealing for cash,
     for all of us."
   reactionCalledLieWrong: 
   frontWeight: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Regrets_in_life
   m_EditorClassIdentifier: 
   question: Do you have any regrets in life?
-  frontFact: No I lived a life that I am content with
+  frontFact: No I lived a life that I am content with.
   isLie: 0
   frontFactForSummaryScales: They lived a good life
   actualFactForSummaryScales: They lived a good life

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Have_you_harmed_anyone_LIE
   m_EditorClassIdentifier: 
   question: Have you ever harmed your fellow man?
-  frontFact: Yes I have hurt a lot of people constantly, when they would say hurtful
-    things to me or my daughter.
+  frontFact: Yes I have hurt a lot of people constantly. Whenever they would say
+    hurtful things to me or my daughter I would show them some manners.
   isLie: 1
   frontFactForSummaryScales: They are violent
   actualFactForSummaryScales: I never hurt others
   reactionBeingCaught: I could never bring myself to harm someone else, they have
-    to have a reason for their attitudes.
+    to have a reason for their attitudes and deserve patience.
   reactionCalledLieWrong: 
   frontWeight: -6
   actualWeight: 4

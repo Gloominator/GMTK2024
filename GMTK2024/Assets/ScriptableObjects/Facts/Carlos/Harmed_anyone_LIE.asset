@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Harmed_anyone_LIE
   m_EditorClassIdentifier: 
   question: Did you ever hurt anyone?
-  frontFact: No my, mom would kill me if I did anything like that.
+  frontFact: No my mom would kill me if I did anything like that.
   isLie: 1
   frontFactForSummaryScales: Mom wouldn't be happy
   actualFactForSummaryScales: Fights weekly at bar

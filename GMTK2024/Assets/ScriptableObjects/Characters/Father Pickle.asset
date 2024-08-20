@@ -27,5 +27,5 @@ MonoBehaviour:
   spriteJudgement: {fileID: 21300000, guid: 8e32911104eb053489298648b34b0a5a, type: 3}
   karma: 0
   heavenResponse: "Thank you\u2026"
-  hellResponse: Did I not leave a righteous enough life?
+  hellResponse: Did I not lead a righteous enough life?
   shouldGoToHeaven: 1
