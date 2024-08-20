@@ -6474,7 +6474,7 @@ MonoBehaviour:
   currentCharacter: {fileID: 0}
   characterSR: {fileID: 2101046604}
   questionsRemaining: 0
-  chatCallFrameDelay: 5
+  chatCallFrameDelay: 2
 --- !u!114 &910786093
 MonoBehaviour:
   m_ObjectHideFlags: 0

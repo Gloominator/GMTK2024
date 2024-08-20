@@ -39,11 +39,13 @@ public class LoadCharacterDisplayText : MonoBehaviour
         // first pos in the list is the front fact, there's no question
         if (UIManager.instance.characterTextLongform.text.Length <= 0)
         {
-            UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
+            //UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
+            CallTypeSentence(currentCharacter.facts[0].frontFact, chatCallFrameDelay, isFirstCall: true);
         }
         else
         {
-            UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
+            //UIManager.instance.characterTextLongform.text = currentCharacter.facts[0].frontFact;
+            CallTypeSentence(currentCharacter.facts[0].frontFact, chatCallFrameDelay, isFirstCall: true);
         }
 
         UIManager.instance.characterNameLongform.text = currentCharacter.characterName;
@@ -125,13 +127,18 @@ public class LoadCharacterDisplayText : MonoBehaviour
         }
     }
 
-    public void CallTypeSentence(string sententence, int callFrameDelay)
+    public void CallTypeSentence(string sententence, int callFrameDelay, bool isFirstCall = false)
     {
+        
         StopAllCoroutines(); // stops any running typesentences
-        StartCoroutine(TypeSentence(sententence, callFrameDelay));
+        StartCoroutine(TypeSentence(sententence, callFrameDelay, isFirstCall));
     }
-    IEnumerator TypeSentence(string sentence, int callFrameDelay)
+    IEnumerator TypeSentence(string sentence, int callFrameDelay, bool isFirstCall = false)
     {
+        if (isFirstCall)
+        {
+            yield return new WaitForSeconds(1f);
+        }
         //add speaking sound effect here?
         chat[0].text = "";
         foreach(char letter in sentence.ToCharArray())

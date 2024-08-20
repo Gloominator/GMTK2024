@@ -20,7 +20,7 @@ MonoBehaviour:
   isLie: 1
   frontFactForSummaryScales: He lived a decent life
   actualFactForSummaryScales: Not a decent guy
-  reactionBeingCaught: I experimented here or there, and I started a few problem
+  reactionBeingCaught: I experimented here or there, and I started a few problems
     but I was always for my family.
   reactionCalledLieWrong: 
   frontWeight: 0
