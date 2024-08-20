@@ -21,10 +21,10 @@ MonoBehaviour:
   summedFrontKarma: 1
   summedActualKarma: -13
   characterName: Susan
-  characterSprite: {fileID: 21300000, guid: e183a23ac2006d74990c84a6efe40d5f, type: 3}
-  spriteSad: {fileID: 21300000, guid: e183a23ac2006d74990c84a6efe40d5f, type: 3}
-  spriteHappy: {fileID: 21300000, guid: e183a23ac2006d74990c84a6efe40d5f, type: 3}
-  spriteJudgement: {fileID: 21300000, guid: e183a23ac2006d74990c84a6efe40d5f, type: 3}
+  characterSprite: {fileID: 21300000, guid: 19435d09494bf944ba8123aad1ce06cc, type: 3}
+  spriteSad: {fileID: 21300000, guid: 19435d09494bf944ba8123aad1ce06cc, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 19435d09494bf944ba8123aad1ce06cc, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 19435d09494bf944ba8123aad1ce06cc, type: 3}
   karma: 0
   heavenResponse: I'm glad we can both agree that this is what I deserve.
   hellResponse: You'll regret this! I'll make sure I see you down there too!

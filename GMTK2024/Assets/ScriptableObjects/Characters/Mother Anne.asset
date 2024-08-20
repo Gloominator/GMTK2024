@@ -21,10 +21,10 @@ MonoBehaviour:
   summedFrontKarma: 1
   summedActualKarma: 13
   characterName: Anne
-  characterSprite: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
-  spriteSad: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
-  spriteHappy: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
-  spriteJudgement: {fileID: 21300000, guid: 0305907abf08b9843abbb709ea68bc7a, type: 3}
+  characterSprite: {fileID: 21300000, guid: 4abfed9bef0778e4cb741864bc8b29f8, type: 3}
+  spriteSad: {fileID: 21300000, guid: 4abfed9bef0778e4cb741864bc8b29f8, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 4abfed9bef0778e4cb741864bc8b29f8, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 4abfed9bef0778e4cb741864bc8b29f8, type: 3}
   karma: 0
   heavenResponse: I hope me and my daughter will be reunited...
   hellResponse: I know it will be challenging but anything for me and my daughter...
