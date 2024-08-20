@@ -30,8 +30,11 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     Bloom bloom;
     public float checkFactHowLongVignetteMovesInward = 2;
 
+    public Color notLyingColor;
+    public Color lyingColor;
+    public Color vignetteFadeInColor;
 
-
+    
     void Start()
     {
         facts_Summary_Text_Sorter = GetComponent<Facts_Summary_Text_Sorter>();

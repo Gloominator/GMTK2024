@@ -6494,7 +6494,7 @@ MonoBehaviour:
   feathersOfTruthRemainingText: {fileID: 474339186}
   badVerdictsText: {fileID: 783902063}
   loadCharacterDisplayText: {fileID: 910786092}
-  allUIRefs: {fileID: 0}
+  allUIRefs: {fileID: 910786096}
   checkLieButton: {fileID: 500030237}
   feathersOfTruthAnimationText: {fileID: 1517023878}
   feathersOfTruthAnimationImage: {fileID: 1670074020}
