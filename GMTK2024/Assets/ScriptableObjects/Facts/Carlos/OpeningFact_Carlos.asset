@@ -16,7 +16,7 @@ MonoBehaviour:
   frontFact: "Yeah I\u2019d say I lived a pretty nice life. I don\u2019t think I
     should go to hell for anything, maybe that one time I killed a bug but you know,
     that thing was big and I was really scared and my girlfriend would\u2019ve cried
-    if she had to"
+    if she had to."
   isLie: 1
   frontFactForSummaryScales: He lived a decent life
   actualFactForSummaryScales: Not a decent guy
