@@ -9,11 +9,7 @@ public class DeleteOnClick : MonoBehaviour
     // Start is called before the first frame update
 
 
-    void OnMouseDown()
-    {
-        Destroy(gameObject);
-        FindObjectOfType<Scales_Balance_Calc>().AddWeight(-myWeight, mySpawnPlace);
-    }
+    
 
     public void SetWeightAndSpawnPlace(float weight,  SpawnTestWeights.SpawnPlace spawnPlace)
     {
