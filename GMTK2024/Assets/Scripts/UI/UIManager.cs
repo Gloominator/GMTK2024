@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     public TMP_Text badVerdictsText;
     public LoadCharacterDisplayText loadCharacterDisplayText;
 
+    public AllUIRefs allUIRefs;
+
     public Button checkLieButton;
     
     public TMP_Text feathersOfTruthAnimationText;
@@ -39,6 +41,10 @@ public class UIManager : MonoBehaviour
     public bool inVerdictState;
 
     public int questionsRemaining;
+
+    public Animator characterSpriteAnimator;
+    public Animator bookAnimator;
+    public Animator decisionAnimator;
     
     // Start is called before the first frame update
     void Awake()
@@ -67,6 +73,14 @@ public class UIManager : MonoBehaviour
         DisplayLieChecker();
     }
 
+    public void PlayJudgementAnimations()
+    {
+        bookAnimator.SetBool("isJudging", true);
+        characterSpriteAnimator.SetBool("isJudging", true);
+        decisionAnimator.SetBool("isJudging", true);
+        
+    }
+
     private void DisplayLieChecker()
     {
         if (questionsRemaining <= 0 && !inVerdictState)
@@ -91,6 +105,11 @@ public class UIManager : MonoBehaviour
         feathersOfTruthRemainingText.text = ": " + GameManager.instance.feathersOfTruth;  
 
         if (change != 0) AnimateFeathersOfTruthText(change);
+    }
+
+    public void ShowStageCompleteMenu()
+    {
+        GameManager.instance.ShowStageCompleteMenu();
     }
 
     public void AnimateFeathersOfTruthText(int change)

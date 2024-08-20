@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public List<Character> charactersJudged;
     public AllUIRefs allUIRefs;
 
+    public bool currentVerdict;
+
     public int feathersOfTruth;
     public int correctChoices;
     public int evilSoulsSentToHeaven;
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         allUIRefs.HideUIJudge();
         UIManager.instance.inVerdictState = true;
+        UIManager.instance.PlayJudgementAnimations();
     }
 
     public void GameOver()
@@ -128,32 +131,57 @@ public class GameManager : MonoBehaviour
 
     public void HeavenOrHellChoose(bool isHeaven)
     {
+        
         if (isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
             correctChoices += 1;
+            currentVerdict = true;
         }
         else if (!isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
             innocentSoulsSentToHell += 1;
+            currentVerdict = false;
         }
         else if (isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
             evilSoulsSentToHeaven += 1;
+            currentVerdict = false;
         }
         else if (!isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
             correctChoices += 1;
+            currentVerdict = false;
         }
 
-        UIManager.instance.UpdateVerdictsText();
+        allUIRefs.ReactionState(isHeaven);
+    }
 
+    public void ShowStageCompleteMenu()
+    {
+        loadCharacterDisplayText.characterSR.enabled = false;
+        allUIRefs.judgementResponseTextBox.SetActive(false);
+        allUIRefs.factsContainer.SetActive(true);
+        UIManager.instance.UpdateVerdictsText();
+        ShowNextLevelButton();
+        
         FindObjectOfType<Facts_Summary_Text_Sorter>().ShowTrueFacts();
-        allUIRefs.ShowNextLevelButton();
         bubbleGenerator.GenerateBubblesOnStart();
+    }
+    
+
+    public void ShowNextLevelButton()
+    {
+        allUIRefs.ShowNextLevelButton();
+        
     }
 
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

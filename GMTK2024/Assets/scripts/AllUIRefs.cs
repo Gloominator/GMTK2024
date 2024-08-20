@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
@@ -9,9 +11,20 @@ public class AllUIRefs : MonoBehaviour
     public GameObject LiesCheckScalesObject;
     public GameObject PlayerChatBoxCanvas;
     public GameObject UIJudgeObj;
+    public GameObject factsContainer;
+    public GameObject toEndScreenButton;
+    public GameObject backToMenuButton;
     public GameObject nextLevelButton;
+    public GameObject checkLieButton;
     public GameObject judgeButtonPanel;
     public GameObject bubblesContainer;
+    public GameObject toResultsButton;
+
+    public TMP_Text verdictResultText;
+
+    public GameObject judgementResponseTextBox;
+    public TMP_Text characterNameJudgement;
+    public TMP_Text characterTextJudgement;
 
     public GameManager gameManager;
 
@@ -26,15 +39,39 @@ public class AllUIRefs : MonoBehaviour
        
     }
 
+    public void ReactionState(bool isHeaven)
+    {
+        judgementResponseTextBox.SetActive(true);
+        UIJudgeObj.SetActive(false);
+        factsContainer.SetActive(false);
+        toResultsButton.SetActive(true);
+
+        characterNameJudgement.text = GameManager.instance.currentCharacterJudged.characterName;
+        
+        if (isHeaven)
+        {
+            characterTextJudgement.text = GameManager.instance.currentCharacterJudged.heavenResponse;
+            UIManager.instance.loadCharacterDisplayText.ChangeCurrentCharacterSprite(GameManager.instance.currentCharacterJudged.spriteHappy);
+        }
+        else
+        {
+            characterTextJudgement.text = GameManager.instance.currentCharacterJudged.hellResponse;
+            UIManager.instance.loadCharacterDisplayText.ChangeCurrentCharacterSprite(GameManager.instance.currentCharacterJudged.spriteSad);
+        }
+    }
+
     public void ResetUIToDefaultState()
     {
         UIManager.instance.lieDetectorObject.SetActive(true);
+        UIManager.instance.loadCharacterDisplayText.characterSR.enabled = true;
         FactsSummaryScalesObject.SetActive(true);
         PlayerChatBoxCanvas.SetActive(true);
         judgeButtonPanel.SetActive(true);
         bubblesContainer.SetActive(true);
         UIJudgeObj.SetActive(false);
+        checkLieButton.SetActive(true);
         facts_Summary_Text_Sorter.ResetFactsSummaryScaleThing();
+        judgementResponseTextBox.SetActive(false);
     }
 
     public void HideUIJudge()
@@ -43,7 +80,8 @@ public class AllUIRefs : MonoBehaviour
         LiesCheckScalesObject.GetComponentInChildren<SpawnTestWeights>().currentFeather.SetActive(false);
         // gets current feather
 
-        //FactsSummaryScalesObject.SetActive(false);
+        FactsSummaryScalesObject.SetActive(false);
+        checkLieButton.SetActive(false);
         PlayerChatBoxCanvas.SetActive(false);
         judgeButtonPanel.SetActive(false);
         bubblesContainer.SetActive(false);
@@ -55,6 +93,15 @@ public class AllUIRefs : MonoBehaviour
     {
         UIJudgeObj.SetActive(false);
         nextLevelButton.SetActive(true);
+
+        if (GameManager.instance.currentVerdict)
+        {
+            verdictResultText.text = "Good Verdict!";
+        }
+        else
+        {
+            verdictResultText.text = "Bad Verdict";
+        }
     }
 
     public void Judge()
@@ -65,6 +112,7 @@ public class AllUIRefs : MonoBehaviour
     public void HeavenOrHellChoose(bool isHeaven)
     {
         gameManager.HeavenOrHellChoose(isHeaven);
+        UIJudgeObj.SetActive(false);
     }
 
     // REPLACED NEXT LEVEL FUNCTION
@@ -108,6 +156,10 @@ public class AllUIRefs : MonoBehaviour
         // wake up.
         
         // I was missing this step... duh
+        UIManager.instance.characterSpriteAnimator.SetBool("isJudging", false);
+        UIManager.instance.bookAnimator.SetBool("isJudging", false);
+        UIManager.instance.decisionAnimator.SetBool("isJudging", false);
+        
         nextLevelButton.SetActive(false);
     }
 }

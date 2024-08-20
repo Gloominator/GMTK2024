@@ -13,7 +13,7 @@ public class LoadCharacterDisplayText : MonoBehaviour
 
     HeartWeigher_LiesChecker heartWeigherLiesChecker;
     Facts_Summary_Text_Sorter factSorter;
-    [SerializeField] Image characterSR;
+    public Image characterSR;
 
     public int questionsRemaining;
     public int chatCallFrameDelay = 5;

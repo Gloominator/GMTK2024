@@ -16,6 +16,9 @@ public class Character : ScriptableObject
     public Sprite spriteJudgement;
     [HideInInspector] public int karma;
 
+    public string heavenResponse;
+    public string hellResponse;
+
     public bool shouldGoToHeaven;
     
     // Start is called before the first frame update

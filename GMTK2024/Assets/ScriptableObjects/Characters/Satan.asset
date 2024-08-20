@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46810988d8d2bd4185573df1bdc9646, type: 3}
   m_Name: Satan
   m_EditorClassIdentifier: 
-  facts: []
+  facts:
+  - {fileID: 11400000, guid: a27183157c596cc4b953b788a1efd85e, type: 2}
+  - {fileID: 11400000, guid: 823b0f2c16a665349b15a2333bfd0757, type: 2}
+  - {fileID: 11400000, guid: 8226c95b5ce0af54ba0750e1f3f7e610, type: 2}
   summedFrontKarma: 1
   summedActualKarma: -15
   characterName: John
-  characterSprite: {fileID: 21300000, guid: c9aa39869248e6746ba4a7dde36bc2a5, type: 3}
-  spriteSad: {fileID: 21300000, guid: d60cc11a0ba646c40828ae8045e00e9a, type: 3}
-  spriteHappy: {fileID: 21300000, guid: 210ba151ec6611c4da9ee90e0d1bdf3e, type: 3}
-  spriteJudgement: {fileID: 21300000, guid: d60cc11a0ba646c40828ae8045e00e9a, type: 3}
+  characterSprite: {fileID: 21300000, guid: 212caf5003ff35b4395ea73780f67b35, type: 3}
+  spriteSad: {fileID: 21300000, guid: 36153100e77a23c4aac880b4f6b5c6cc, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 73f3b5a7a67cd3b48bd5592c53d67469, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 23bdba92dd738d8478f1889ff94c3ad4, type: 3}
   karma: 0
   shouldGoToHeaven: 0
