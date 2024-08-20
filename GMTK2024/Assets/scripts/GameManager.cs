@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour
         else if (!isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
             correctChoices += 1;
-            currentVerdict = false;
+            currentVerdict = true;
         }
 
         allUIRefs.ReactionState(isHeaven);
