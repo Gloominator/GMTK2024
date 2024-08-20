@@ -52,11 +52,10 @@ public class GameManager : MonoBehaviour
     //onloadscene
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
         loadCharacterDisplayText = FindObjectOfType<LoadCharacterDisplayText>();
         allUIRefs = FindObjectOfType<AllUIRefs>();
 
-        currentCharacterJudged = characters[Random.Range(0, characters.Count)];
+        currentCharacterJudged = characters[5];
         charactersJudged.Add(currentCharacterJudged);
         loadCharacterDisplayText.LoadCharacterText(currentCharacterJudged);
     }
@@ -70,6 +69,20 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        //hide all the other game UI
+        allUIRefs.FactsSummaryScalesObject.SetActive(false);
+        allUIRefs.LiesCheckScalesObject.SetActive(false);
+        allUIRefs.PlayerChatBoxCanvas.SetActive(false);
+        allUIRefs.UIJudgeObj.SetActive(false);
+        allUIRefs.factsContainer.SetActive(false);
+        allUIRefs.nextLevelButton.SetActive(false);
+        allUIRefs.checkLieButton.SetActive(false);
+        allUIRefs.judgeButtonPanel.SetActive(false);
+        allUIRefs.bubblesContainer.SetActive(false);
+        allUIRefs.toResultsButton.SetActive(false);
+        UIManager.instance.feathersOfTruthRemainingText.SetActive(false);
+        UIManager.instance.badVerdictsText.SetActive(false);
+
         // TODO: IMPLEMENT ACTUAL GAME OVER LOGIC
         GetRank();
         UIManager.instance.UpdateEndGameTexts();
@@ -89,7 +102,7 @@ public class GameManager : MonoBehaviour
 
         score += feathersOfTruth * 100;
         score += correctChoices * 100;
-        score -= innocentSoulsSentToHell *100;
+        score -= innocentSoulsSentToHell * 100;
         score -= evilSoulsSentToHeaven * 100;
 
         Debug.Log("Score: " + score);
@@ -123,7 +136,7 @@ public class GameManager : MonoBehaviour
         {
             rank = "Devil's Advocate";
         }
-        else 
+        else
         {
             rank = "Forsaken";
         }
@@ -131,7 +144,7 @@ public class GameManager : MonoBehaviour
 
     public void HeavenOrHellChoose(bool isHeaven)
     {
-        
+
         if (isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
             correctChoices += 1;
@@ -163,16 +176,16 @@ public class GameManager : MonoBehaviour
         allUIRefs.factsContainer.SetActive(true);
         UIManager.instance.UpdateVerdictsText();
         ShowNextLevelButton();
-        
+
         FindObjectOfType<Facts_Summary_Text_Sorter>().ShowTrueFacts();
         bubbleGenerator.GenerateBubblesOnStart();
     }
-    
+
 
     public void ShowNextLevelButton()
     {
         allUIRefs.ShowNextLevelButton();
-        
+
     }
 
     public void RestartScene()

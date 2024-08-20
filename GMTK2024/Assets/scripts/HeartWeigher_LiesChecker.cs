@@ -15,6 +15,8 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     public Fact currentFactInTheBigBox;
     [SerializeField] LoadCharacterDisplayText loadCharacterDisplayText;
 
+    public List<Fact> factsChecked = new List<Fact>();
+
     void Start()
     {
         facts_Summary_Text_Sorter = GetComponent<Facts_Summary_Text_Sorter>();
@@ -58,7 +60,14 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     //connects to "press x to doubt" button
     public void CheckThisFactButton()
     {
+        if (factsChecked.Contains(currentFactInTheBigBox))
+        {
+            Debug.Log("You have already checked this fact");
+            return;
+        }
+        
         CheckThisFact(currentFactInTheBigBox);
+        factsChecked.Add(currentFactInTheBigBox);
     }
     //finds the fact by tmp in that pair and checks it
     //finds the fact by tmp in that pair and checks it

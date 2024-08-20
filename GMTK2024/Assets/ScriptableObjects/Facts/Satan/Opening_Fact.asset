@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: 
   frontFact: Hello, my name is S... Uh, John. Better be quick, there's a few hundred
-    people behind me that you have to get through.  I lived real good for awhile,
-    and then spend it cleaning up the garbage. Do yourself a favor and if you're
-    new to this whole thing, call me for bluffs, promise won't hurt my feelings.
+    people behind me that you have to judge. I was an angel for a while, and then
+    spent my life cleaning up the garbage. Do yourself a favor if you're new to this
+    whole thing, call me for bluffs, promise won't hurt my feelings.
   isLie: 1
   frontFactForSummaryScales: Lived right until?
   actualFactForSummaryScales: Punished the wicked
