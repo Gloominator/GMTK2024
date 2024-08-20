@@ -173,3 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myWeight: 0
   mySpawnPlace: 0
+  featherSprite: {fileID: 21300000, guid: 0484df9c99ea49845af0ac5c57520d10, type: 3}
