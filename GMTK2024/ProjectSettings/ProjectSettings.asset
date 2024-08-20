@@ -570,7 +570,7 @@ PlayerSettings:
     QNX: DOTWEEN
     Stadia: DOTWEEN
     Standalone: DOTWEEN;INK_RUNTIME;INK_EDITOR
-    WebGL: DOTWEEN
+    WebGL: DOTWEEN;INK_RUNTIME;INK_EDITOR
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
     iPhone: DOTWEEN

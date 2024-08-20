@@ -21,10 +21,10 @@ MonoBehaviour:
   summedFrontKarma: 1
   summedActualKarma: 9
   characterName: Father Pickle
-  characterSprite: {fileID: 21300000, guid: 8e32911104eb053489298648b34b0a5a, type: 3}
-  spriteSad: {fileID: 21300000, guid: 8e32911104eb053489298648b34b0a5a, type: 3}
-  spriteHappy: {fileID: 21300000, guid: 8e32911104eb053489298648b34b0a5a, type: 3}
-  spriteJudgement: {fileID: 21300000, guid: 8e32911104eb053489298648b34b0a5a, type: 3}
+  characterSprite: {fileID: 21300000, guid: bd1126321dd98a5499401091ddf3b715, type: 3}
+  spriteSad: {fileID: 21300000, guid: 9e73bb78bbc50a44fb4915fec79ef08c, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 06fd189d2addb624295b79d24ce5f670, type: 3}
+  spriteJudgement: {fileID: 21300000, guid: 4fbc25b64c578b44c9fca3fc9ff78c73, type: 3}
   karma: 0
   heavenResponse: "Thank you\u2026"
   hellResponse: Did I not lead a righteous enough life?

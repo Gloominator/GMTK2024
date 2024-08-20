@@ -20,6 +20,9 @@ public class AllUIRefs : MonoBehaviour
     public GameObject bubblesContainer;
     public GameObject toResultsButton;
 
+    public GameObject heavenPortal;
+    public GameObject hellvoid;
+
     public TMP_Text verdictResultText;
 
     public GameObject judgementResponseTextBox;

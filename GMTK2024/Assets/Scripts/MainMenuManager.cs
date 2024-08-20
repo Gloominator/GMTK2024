@@ -47,7 +47,7 @@ namespace MainMenu
         private void Start()
         {
             currentMenu = mainMenuObject;
-            currentSubMenu = gameplaySubMenu;
+            currentSubMenu = audioSubMenu;
         }
 
         private void Update()

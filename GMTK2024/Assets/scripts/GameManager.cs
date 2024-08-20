@@ -175,23 +175,27 @@ public class GameManager : MonoBehaviour
         if (isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
             AudioManager.instance.PlayGameplaySFX(heavenSFX);
+            allUIRefs.heavenPortal.SetActive(true);
             correctChoices += 1;
             currentVerdict = true;
         }
         else if (!isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
+            allUIRefs.hellvoid.SetActive(true);
             AudioManager.instance.PlayGameplaySFX(hellSFX);
             innocentSoulsSentToHell += 1;
             currentVerdict = false;
         }
         else if (isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
+            allUIRefs.heavenPortal.SetActive(true);
             AudioManager.instance.PlayGameplaySFX(heavenSFX);
             evilSoulsSentToHeaven += 1;
             currentVerdict = false;
         }
         else if (!isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
+            allUIRefs.hellvoid.SetActive(true);
             AudioManager.instance.PlayGameplaySFX(hellSFX);
             correctChoices += 1;
             currentVerdict = true;
@@ -202,6 +206,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowStageCompleteMenu()
     {
+        allUIRefs.heavenPortal.SetActive(false);
+        allUIRefs.hellvoid.SetActive(false);
         AudioManager.instance.PlayGameplaySFX(stageCompleteSFX);
         loadCharacterDisplayText.characterSR.enabled = false;
         allUIRefs.judgementResponseTextBox.SetActive(false);
