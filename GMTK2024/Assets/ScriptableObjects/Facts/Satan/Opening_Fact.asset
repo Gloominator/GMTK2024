@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: 
   frontFact: Hello, my name is S... Uh, John. Better be quick, there's a few hundred
-    people behind me that you have to get through. How I died? Well it involved some
-    issues with me and my dad, you definitely know the rest though.
+    people behind me that you have to get through.  I lived real good for awhile,
+    and then spend it cleaning up the garbage. Do yourself a favor and if you're
+    new to this whole thing, call me for bluffs, promise won't hurt my feelings.
   isLie: 1
-  frontFactForSummaryScales: Dad issues
-  actualFactForSummaryScales: Dad issues?
-  reactionBeingCaught: What I said isn't fully incorrect, I did have issues with
-    father dearest.
+  frontFactForSummaryScales: Lived right until?
+  actualFactForSummaryScales: Punished the wicked
+  reactionBeingCaught: What I said isn't fully incorrect, I handled some of the worst
+    out there, Iwasn't all that good myself though.
   reactionCalledLieWrong: 
   frontWeight: 1
   actualWeight: -5
