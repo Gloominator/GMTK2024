@@ -21,11 +21,14 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
         musicSource.volume = MainMenuManager.instance.musicVolume;
         gameplaySource.volume = MainMenuManager.instance.gameplayVolume;
+        
     }
 }
