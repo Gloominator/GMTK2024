@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
         allUIRefs.HideUIJudge();
         UIManager.instance.inVerdictState = true;
         UIManager.instance.PlayJudgementAnimations();
+        loadCharacterDisplayText.ChangeCurrentCharacterSprite(currentCharacterJudged.spriteJudgement);
     }
 
     public void GameOver()

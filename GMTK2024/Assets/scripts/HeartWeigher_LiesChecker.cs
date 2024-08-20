@@ -229,7 +229,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
 
         float currentIntensity = vignette.intensity.value;
-        vignette.color.value = Color.black;
+        vignette.color.value = vignetteFadeInColor;
         float elapsedTime = 0;
 
 
@@ -245,9 +245,9 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
     public IEnumerator HideLiesScalesAndMoveVignetteOutward(float time, bool isLie)
     {
         if (isLie)
-            vignette.color.value = Color.red;
+            vignette.color.value = lyingColor;
         else
-            vignette.color.value = Color.green;
+            vignette.color.value = notLyingColor;
 
         float currentIntensity = vignette.intensity.value;
         float elapsedTime = 0;

@@ -6564,6 +6564,9 @@ MonoBehaviour:
   liesScalesParent: {fileID: 1648050827}
   postProcessingVolume: {fileID: 1573165881}
   checkFactHowLongVignetteMovesInward: 2
+  notLyingColor: {r: 0.6320754, g: 0.61172354, b: 0.320013, a: 0.8862745}
+  lyingColor: {r: 0.6037736, g: 0.25442028, b: 0.25442028, a: 0.80784315}
+  vignetteFadeInColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.4862745}
 --- !u!114 &910786096
 MonoBehaviour:
   m_ObjectHideFlags: 0
