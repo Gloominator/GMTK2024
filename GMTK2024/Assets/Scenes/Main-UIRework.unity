@@ -5215,15 +5215,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5251,7 +5251,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 24.759583, y: 169.86351, z: 22.69629, w: 199.4956}
+  m_margin: {x: 3.867859, y: 154.54285, z: -0.98114014, w: 188.3532}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7613,6 +7613,19 @@ MonoBehaviour:
   innocentSoulsSentToHell: 0
   rank: 
   bubbleGenerator: {fileID: 862962583}
+  endGameSFXGood: {fileID: 8300000, guid: a25f9a188dfbc25428deedd709c6e477, type: 3}
+  endGameSFXBad: {fileID: 8300000, guid: 5d68aec9277c1884d9df8c41c6c67ecd, type: 3}
+  buttonSFX: {fileID: 8300000, guid: 7f0d22156d3a3c4419cdee5bf22bb0b4, type: 3}
+  judgementSFX: {fileID: 8300000, guid: 751ef6cc46255b64f8d6518c7de5c51e, type: 3}
+  callLieSFX: {fileID: 8300000, guid: 43235a5c01979ae4494d4ccf2414837c, type: 3}
+  checkLieTenseSFX: {fileID: 8300000, guid: 442b025915c886c45b3b3a495bb2b438, type: 3}
+  heavenSFX: {fileID: 8300000, guid: 2df595aad3f64b74da9e79e41a9b7b18, type: 3}
+  hellSFX: {fileID: 8300000, guid: 03b547139974e5e4895fd19eb8c151c1, type: 3}
+  stageCompleteSFX: {fileID: 0}
+  isLieSFX: {fileID: 8300000, guid: 2bcdf61ea96553647a4b76035d00241c, type: 3}
+  isTruthSFX: {fileID: 8300000, guid: 0c33538bc151ed04fa010aa658493202, type: 3}
+  alreadyCheckedLieSFX: {fileID: 8300000, guid: e7cc50c6d28aae140b8cce7ac5df6bee, type: 3}
+  talkingTypeSFX: {fileID: 8300000, guid: 67af639dc05b0024693beda3d147d14a, type: 3}
 --- !u!4 &1038831175
 Transform:
   m_ObjectHideFlags: 0

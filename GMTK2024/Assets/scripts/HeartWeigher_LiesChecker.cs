@@ -95,9 +95,10 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
             if (factsChecked.Contains(currentFactInTheBigBox))
             {
                 Debug.Log("You have already checked this fact");
+                AudioManager.instance.PlayGameplaySFX(GameManager.instance.alreadyCheckedLieSFX);
                 return;
             }
-
+            AudioManager.instance.PlayGameplaySFX(GameManager.instance.callLieSFX);
             StartCoroutine(CheckThisFactWithDelay(howLongWaitForNewHeartSpawn, currentFactInTheBigBox));
             factsChecked.Add(currentFactInTheBigBox);
         }
@@ -126,6 +127,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
         facts_Summary_Text_Sorter.currentFactAndTmpPairs[fact].GetComponent<Button>().interactable = false;
         if (fact.isLie)
         {
+            AudioManager.instance.PlayGameplaySFX(GameManager.instance.isLieSFX);
             // player gets a bonus feather for finding a lie
             GameManager.instance.feathersOfTruth += feathersForGuessRight;
             UIManager.instance.UpdateFeathersOfTruthText(1); //just a visualiser that you got right and "got something" (test)
@@ -154,6 +156,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlayGameplaySFX(GameManager.instance.isTruthSFX);
             //find this fact in the original list, make it different color
             // player loses a feather for questioning a truth
              GameManager.instance.feathersOfTruth -= 1;
@@ -184,6 +187,7 @@ public class HeartWeigher_LiesChecker : MonoBehaviour
 
     public IEnumerator CheckThisFactWithDelay(float delay, Fact fact)
     {
+        AudioManager.instance.PlayGameplaySFX(GameManager.instance.checkLieTenseSFX);
         StartCoroutine(ShowLiesScalesAndMoveVignetteInward(checkFactHowLongVignetteMovesInward));
         yield return new WaitForSeconds(delay);
         CheckThisFact(fact);

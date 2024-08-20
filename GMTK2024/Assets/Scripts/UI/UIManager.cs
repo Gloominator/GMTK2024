@@ -130,6 +130,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void PlayButtonPressSFX()
+    {
+        AudioManager.instance.PlayGameplaySFX(GameManager.instance.buttonSFX);
+    }
+
     public void UpdateFeathersOfTruthText(int change)
     {
         feathersOfTruthRemainingText.text = ": " + GameManager.instance.feathersOfTruth;

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using Random = System.Random;
 
 public class LoadCharacterDisplayText : MonoBehaviour
 {
@@ -133,17 +134,20 @@ public class LoadCharacterDisplayText : MonoBehaviour
         StopAllCoroutines(); // stops any running typesentences
         StartCoroutine(TypeSentence(sententence, callFrameDelay, isFirstCall));
     }
+    
     IEnumerator TypeSentence(string sentence, int callFrameDelay, bool isFirstCall = false)
     {
         if (isFirstCall)
         {
             yield return new WaitForSeconds(1f);
         }
-        //add speaking sound effect here?
+        // Add random pitch or have it play character specific sounds eventually
         chat[0].text = "";
         foreach(char letter in sentence.ToCharArray())
         {
             chat[0].text += letter;
+            // DO NOT UNDO THIS COMMENT YET. IT SOUNDS SO BAD
+            //AudioManager.instance.PlayGameplaySFX(GameManager.instance.talkingTypeSFX);
             for (int i = 0; i < callFrameDelay; i++)
             {
                 yield return null;

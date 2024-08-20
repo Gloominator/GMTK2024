@@ -22,6 +22,21 @@ public class GameManager : MonoBehaviour
     public string rank;
     public BubbleGenerator bubbleGenerator;
     public static GameManager instance;
+
+    [Header("SFX")] 
+    public AudioClip endGameSFXGood;
+    public AudioClip endGameSFXBad;
+    public AudioClip buttonSFX;
+    public AudioClip judgementSFX;
+    public AudioClip callLieSFX;
+    public AudioClip checkLieTenseSFX;
+    public AudioClip heavenSFX;
+    public AudioClip hellSFX;
+    public AudioClip stageCompleteSFX;
+    public AudioClip isLieSFX;
+    public AudioClip isTruthSFX;
+    public AudioClip alreadyCheckedLieSFX;
+    public AudioClip talkingTypeSFX;
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -62,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void Judge()
     {
+        AudioManager.instance.PlayGameplaySFX(judgementSFX);
         allUIRefs.HideUIJudge();
         UIManager.instance.inVerdictState = true;
         UIManager.instance.PlayJudgementAnimations();
@@ -93,6 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void GetRank()
     {
+        
         int score = 0;
 
         Debug.Log("Get Rank");
@@ -107,6 +124,15 @@ public class GameManager : MonoBehaviour
         score -= evilSoulsSentToHeaven * 100;
 
         Debug.Log("Score: " + score);
+
+        if (score >= 500)
+        {
+            AudioManager.instance.PlayGameplaySFX(endGameSFXGood);
+        }
+        else
+        {
+            AudioManager.instance.PlayGameplaySFX(endGameSFXBad);
+        }
 
 
         if (score >= 800)
@@ -145,24 +171,28 @@ public class GameManager : MonoBehaviour
 
     public void HeavenOrHellChoose(bool isHeaven)
     {
-
+        
         if (isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
+            AudioManager.instance.PlayGameplaySFX(heavenSFX);
             correctChoices += 1;
             currentVerdict = true;
         }
         else if (!isHeaven && currentCharacterJudged.shouldGoToHeaven)
         {
+            AudioManager.instance.PlayGameplaySFX(hellSFX);
             innocentSoulsSentToHell += 1;
             currentVerdict = false;
         }
         else if (isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
+            AudioManager.instance.PlayGameplaySFX(heavenSFX);
             evilSoulsSentToHeaven += 1;
             currentVerdict = false;
         }
         else if (!isHeaven && !currentCharacterJudged.shouldGoToHeaven)
         {
+            AudioManager.instance.PlayGameplaySFX(hellSFX);
             correctChoices += 1;
             currentVerdict = true;
         }
@@ -172,6 +202,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowStageCompleteMenu()
     {
+        AudioManager.instance.PlayGameplaySFX(stageCompleteSFX);
         loadCharacterDisplayText.characterSR.enabled = false;
         allUIRefs.judgementResponseTextBox.SetActive(false);
         allUIRefs.factsContainer.SetActive(true);
