@@ -80,8 +80,8 @@ public class GameManager : MonoBehaviour
         allUIRefs.judgeButtonPanel.SetActive(false);
         allUIRefs.bubblesContainer.SetActive(false);
         allUIRefs.toResultsButton.SetActive(false);
-        UIManager.instance.feathersOfTruthRemainingText.SetActive(false);
-        UIManager.instance.badVerdictsText.SetActive(false);
+        UIManager.instance.feathersOfTruthRemainingText.gameObject.SetActive(false);
+        UIManager.instance.badVerdictsText.gameObject.SetActive(false);
 
         // TODO: IMPLEMENT ACTUAL GAME OVER LOGIC
         GetRank();
