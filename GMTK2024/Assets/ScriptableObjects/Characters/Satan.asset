@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a27183157c596cc4b953b788a1efd85e, type: 2}
   - {fileID: 11400000, guid: 823b0f2c16a665349b15a2333bfd0757, type: 2}
   - {fileID: 11400000, guid: 8226c95b5ce0af54ba0750e1f3f7e610, type: 2}
+  - {fileID: 11400000, guid: 9d8a6098298d814409eb0a5018776915, type: 2}
+  - {fileID: 11400000, guid: 41560c16162acc843966500277a6469e, type: 2}
   summedFrontKarma: 1
   summedActualKarma: -15
   characterName: John
@@ -24,4 +26,6 @@ MonoBehaviour:
   spriteHappy: {fileID: 21300000, guid: 73f3b5a7a67cd3b48bd5592c53d67469, type: 3}
   spriteJudgement: {fileID: 21300000, guid: 23bdba92dd738d8478f1889ff94c3ad4, type: 3}
   karma: 0
+  heavenResponse: 
+  hellResponse: 
   shouldGoToHeaven: 0
